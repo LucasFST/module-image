@@ -1,0 +1,48 @@
+\hypertarget{_pixel_8h_source}{}\doxysection{Pixel.\+h}
+\label{_pixel_8h_source}\index{src/Pixel.h@{src/Pixel.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PIXEL\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PIXEL\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_pixel}{Pixel}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     public :}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{comment}{// Constructeur par défaut de la classe: initialise le pixel à la couleur noire}}
+\DoxyCodeLine{13    \mbox{\hyperlink{class_pixel}{Pixel}} ();}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15    \textcolor{comment}{// Constructeur de la classe: initialise r,g,b avec les paramètres}}
+\DoxyCodeLine{16    \mbox{\hyperlink{class_pixel}{Pixel}} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nr, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ng, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nb);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18    \textcolor{comment}{// Accesseur : récupère la composante rouge du pixel}}
+\DoxyCodeLine{19    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getRouge () \textcolor{keyword}{const};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21    \textcolor{comment}{// Accesseur : récupère la composante verte du pixel}}
+\DoxyCodeLine{22    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getVert () \textcolor{keyword}{const};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24    \textcolor{comment}{// Accesseur : récupère la composante bleue du pixel}}
+\DoxyCodeLine{25    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getBleu () \textcolor{keyword}{const};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27    \textcolor{comment}{// Mutateur : modifie la composante rouge du pixel}}
+\DoxyCodeLine{28    \textcolor{keywordtype}{void} setRouge (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nr);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30    \textcolor{comment}{// Mutateur : modifie la composante verte du pixel}}
+\DoxyCodeLine{31    \textcolor{keywordtype}{void} setVert (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ng);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33    \textcolor{comment}{// Mutateur : modifie la composante bleue du pixel}}
+\DoxyCodeLine{34    \textcolor{keywordtype}{void} setBleu (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nb);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36    private :}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} r,g,b;    \textcolor{comment}{// les composantes du pixel, unsigned char en C++}}
+\DoxyCodeLine{39 \};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{42 }
+
+\end{DoxyCode}

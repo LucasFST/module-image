@@ -1,0 +1,63 @@
+\hypertarget{_image_8h_source}{}\doxysection{Image.\+h}
+\label{_image_8h_source}\index{src/Image.h@{src/Image.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef IMAGE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define IMAGE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Pixel.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_image}{Image}} \{}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10     \textcolor{keyword}{private}:}
+\DoxyCodeLine{11         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dimx,dimy;}
+\DoxyCodeLine{12         \mbox{\hyperlink{class_pixel}{Pixel}}* tab;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{keyword}{public}:}
+\DoxyCodeLine{15         \textcolor{comment}{// Constructeur par défaut de la classe: initialise dimx et dimy à 0}}
+\DoxyCodeLine{16         \textcolor{comment}{// ce constructeur n'alloue pas de pixel}}
+\DoxyCodeLine{20 \textcolor{comment}{}    \mbox{\hyperlink{class_image_a58edd1c45b4faeb5f789b0d036d02313}{Image}} ();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22         \textcolor{comment}{// Constructeur de la classe: initialise dimx et dimy (après vérification)}}
+\DoxyCodeLine{23         \textcolor{comment}{// puis alloue le tableau de pixel dans le tas (image noire)}}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_image_a58edd1c45b4faeb5f789b0d036d02313}{Image}} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dimx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dimy);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         \textcolor{comment}{// Destructeur de la classe: déallocation de la mémoire du tableau de pixels}}
+\DoxyCodeLine{27         \textcolor{comment}{// et mise à jour des champs dimx et dimy à 0}}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_image}{\string~Image}} ();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         \textcolor{comment}{// Accesseur : récupère le pixel original de coordonnées (x,y) en vérifiant leur validité}}
+\DoxyCodeLine{31         \textcolor{comment}{// la formule pour passer d'un tab 2D à un tab 1D est tab[ydimx+x]}}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_pixel}{Pixel}} getPix (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y) \textcolor{keyword}{const};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34         \textcolor{comment}{// Mutateur : modifie le pixel de coordonnées (x,y)}}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} setPix (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dimx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dimy, \textcolor{keyword}{const} \mbox{\hyperlink{class_pixel}{Pixel}}\& couleur );}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \textcolor{comment}{// Dessine un rectangle plein de la couleur dans l'image (en utilisant setPix, indices en paramètre compris)}}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} dessinerRectangle (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} Xmin, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} Ymin, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} Xmax, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} Ymax, \textcolor{keyword}{const} \mbox{\hyperlink{class_pixel}{Pixel}}\& couleur );}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40         \textcolor{comment}{// Efface l'image en la remplissant de la couleur en paramètre}}
+\DoxyCodeLine{41         \textcolor{comment}{// (en appelant dessinerRectangle avec le bon rectangle)}}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} effacer (\textcolor{keyword}{const} \mbox{\hyperlink{class_pixel}{Pixel}}\& couleur);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         \textcolor{comment}{// Effectue une série de tests vérifiant que le module fonctionne et}}
+\DoxyCodeLine{45         \textcolor{comment}{// que les données membres de l'objet sont conformes}}
+\DoxyCodeLine{46    \textcolor{keywordtype}{void} testRegression ();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48         \textcolor{comment}{//sauver une image dans un fichier}}
+\DoxyCodeLine{49    \textcolor{keywordtype}{void} sauver(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& filename) \textcolor{keyword}{const};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \textcolor{comment}{//ouvrir une image depuis un fichier}}
+\DoxyCodeLine{52    \textcolor{keywordtype}{void} ouvrir(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& filename);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         \textcolor{comment}{//afficher les valeurs des pixels sur la console}}
+\DoxyCodeLine{55    \textcolor{keywordtype}{void} afficherConsole();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
