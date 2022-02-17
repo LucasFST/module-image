@@ -4,13 +4,12 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_image_a58edd1c45b4faeb5f789b0d036d02313}\label{class_image_a58edd1c45b4faeb5f789b0d036d02313}} 
-<<<<<<< HEAD
-\mbox{\hyperlink{class_image_a58edd1c45b4faeb5f789b0d036d02313}{Image}} ()
+{\bfseries Image} ()
 \begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe\+: initialise dimx et dimy à 0, ce constructeur n\textquotesingle{}alloue pas de pixel. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_image_a3ee63d37f01ef80f9d8ed5bf8e6fe10d}{Image}} (unsigned int dimx, unsigned int dimy)
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe\+: initialise dimx et dimy (après vérification), puis alloue le tableau de pixel dans le tas (image noire) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_image_a0294f63700543e11c0f0da85601c7ae5}\label{class_image_a0294f63700543e11c0f0da85601c7ae5}} 
-\mbox{\hyperlink{class_image_a0294f63700543e11c0f0da85601c7ae5}{$\sim$\+Image}} ()
+{\bfseries $\sim$\+Image} ()
 \begin{DoxyCompactList}\small\item\em Destructeur de la classe\+: déallocation de la mémoire du tableau de pixel et mise à jour des champs dimx et dimy à 0. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_pixel}{Pixel}} \mbox{\hyperlink{class_image_aa2c1f02bdf9178459b5bb7409ab86648}{get\+Pix}} (unsigned int x, unsigned int y) const
 \begin{DoxyCompactList}\small\item\em Accesseur \+: récupère le pixel original de coordonnées (x,y) en vérifiant leur validité \end{DoxyCompactList}\item 
@@ -31,10 +30,6 @@ void \mbox{\hyperlink{class_image_aa3cc6f7401625c11dcd5ef003f37e4fa}{afficher\+C
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-=======
-{\bfseries Image} ()
-\begin{DoxyCompactList}\small\item\em test ta mere la pute \end{DoxyCompactList}\item 
->>>>>>> 55ac5d4d67cac8f4d872ba654a8089b6f7d3ab78
 \mbox{\Hypertarget{class_image_a3ee63d37f01ef80f9d8ed5bf8e6fe10d}\label{class_image_a3ee63d37f01ef80f9d8ed5bf8e6fe10d}} 
 \index{Image@{Image}!Image@{Image}}
 \index{Image@{Image}!Image@{Image}}
@@ -89,7 +84,7 @@ Dessine un rectangle plein de la couleur dans l\textquotesingle{}image.
 \hline
 \mbox{\texttt{ in}}  & {\em Ymax} & la composante x du coin bas droite \\
 \hline
-\mbox{\texttt{ in,out}}  & {\em couleur} & la couleur en code R\+GB de notre pixel \\
+\mbox{\texttt{ in,out}}  & {\em couleur} & la couleur en code RGB de notre pixel \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -107,7 +102,7 @@ Efface l\textquotesingle{}image en la remplissant de la couleur en paramètre.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in,out}}  & {\em couleur} & la couleur en code R\+GB de notre pixel \\
+\mbox{\texttt{ in,out}}  & {\em couleur} & la couleur en code RGB de notre pixel \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -185,7 +180,7 @@ Mutateur \+: modifie la couleur du pixel de coordonnées (x,y)
 \hline
 \mbox{\texttt{ in}}  & {\em dimy} & la dimension en ordonnée de notre image \\
 \hline
-\mbox{\texttt{ in,out}}  & {\em couleur} & la couleur en code R\+GB de notre pixel \\
+\mbox{\texttt{ in,out}}  & {\em couleur} & la couleur en code RGB de notre pixel \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

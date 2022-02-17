@@ -13,24 +13,17 @@
 \RequirePackage{tabu_doxygen}
 \RequirePackage{fancyvrb}
 \RequirePackage{tabularx}
-<<<<<<< HEAD
-=======
 \RequirePackage{multicol}
->>>>>>> 55ac5d4d67cac8f4d872ba654a8089b6f7d3ab78
 \RequirePackage{multirow}
 \RequirePackage{hanging}
 \RequirePackage{ifpdf}
 \RequirePackage{adjustbox}
 \RequirePackage{amssymb}
 \RequirePackage{stackengine}
-<<<<<<< HEAD
-\RequirePackage[normalem]{ulem} % for strikeout, but don't modify emphasis
-=======
 \RequirePackage{enumitem}
 \RequirePackage{alphalph}
 \RequirePackage[normalem]{ulem} % for strikeout, but don't modify emphasis
 \RequirePackage{enumitem}
->>>>>>> 55ac5d4d67cac8f4d872ba654a8089b6f7d3ab78
 
 %---------- Internal commands used in this style file ----------------
 
@@ -173,20 +166,6 @@
 }
 
 % Used by numbered lists (using '-#' or <ol> ... </ol>)
-<<<<<<< HEAD
-\newenvironment{DoxyEnumerate}{%
-  \enumerate%
-}{%
-  \endenumerate%
-}
-
-% Used by bullet lists (using '-', @li, @arg, or <ul> ... </ul>)
-\newenvironment{DoxyItemize}{%
-  \itemize%
-}{%
-  \enditemize%
-}
-=======
 \setlistdepth{12}
 \newlist{DoxyEnumerate}{enumerate}{12}
 \setlist[DoxyEnumerate,1]{label=\arabic*.}
@@ -211,7 +190,6 @@
 \setlist[DoxyItemize,2]{label=\normalfont\bfseries \textendash}
 \setlist[DoxyItemize,3]{label=\textasteriskcentered}
 \setlist[DoxyItemize,4]{label=\textperiodcentered}
->>>>>>> 55ac5d4d67cac8f4d872ba654a8089b6f7d3ab78
 
 % Used by description lists (using <dl> ... </dl>)
 \newenvironment{DoxyDescription}{%
@@ -224,14 +202,8 @@
 % (only if caption is specified)
 \newenvironment{DoxyImage}{%
   \begin{figure}[H]%
-<<<<<<< HEAD
-    \begin{center}%
-}{%
-    \end{center}%
-=======
     \centering%
 }{%
->>>>>>> 55ac5d4d67cac8f4d872ba654a8089b6f7d3ab78
   \end{figure}%
 }
 
@@ -614,11 +586,6 @@
 % Define caption that is also suitable in a table
 \makeatletter
 \def\doxyfigcaption{%
-<<<<<<< HEAD
-\refstepcounter{figure}%
-\@dblarg{\@caption{figure}}}
-\makeatother
-=======
 \H@refstepcounter{figure}%
 \@dblarg{\@caption{figure}}}
 \makeatother
@@ -632,4 +599,3 @@
 \makeatother
 \AddEnumerateCounter{\enumalphalphcnt}{\@enumalphalphcnt}{aa}
 \AddEnumerateCounter{\enumAlphAlphcnt}{\@enumAlphAlphcnt}{AA}
->>>>>>> 55ac5d4d67cac8f4d872ba654a8089b6f7d3ab78

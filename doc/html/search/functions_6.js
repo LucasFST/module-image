@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sauver_19',['sauver',['../class_image.html#af870cb0c00a370927e6957f99a409586',1,'Image']]],
-  ['setpix_20',['setPix',['../class_image.html#a713c922e13a0a05ac88bef756b4ca90d',1,'Image']]]
+  ['pixel_0',['Pixel',['../class_pixel.html#a27ad99a2f705e635c42d242d530d4756',1,'Pixel::Pixel()'],['../class_pixel.html#a5c930d187b7d6412870150884e553421',1,'Pixel::Pixel(unsigned int nr, unsigned int ng, unsigned int nb)']]]
 ];
