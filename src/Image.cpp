@@ -26,7 +26,13 @@ Image::Image(unsigned int dimX, unsigned int dimY)
 //destructeur par defaut
 Image::~Image()
     {
-        if(tab != NULL)
+        if(tab != NULL) 
+        {
+            delete[] tab;
+        }
+        tab=NULL;
+        dimx=0;
+        dimy=0;
     }
 
 
