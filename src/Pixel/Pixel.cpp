@@ -51,4 +51,3 @@ void Pixel::setBleu (unsigned int nb)
 	assert(nb <= 255); 
 	b = nb;
 }
-//test git 
