@@ -81,10 +81,6 @@ void Image::effacer (const Pixel& couleur)
 
     }
 
-void Image::testRegression () //const
-
-
-
 void Image::testRegression ()
 {
     dimx=2;
