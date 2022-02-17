@@ -14,9 +14,6 @@ class Image {
     public:
         // Constructeur par défaut de la classe: initialise dimx et dimy à 0
         // ce constructeur n'alloue pas de pixel
-        /**
-        * @brief test
-        */
     Image ();
 
         // Constructeur de la classe: initialise dimx et dimy (après vérification)
@@ -29,6 +26,9 @@ class Image {
 
         // Accesseur : récupère le pixel original de coordonnées (x,y) en vérifiant leur validité
         // la formule pour passer d'un tab 2D à un tab 1D est tab[ydimx+x]
+        //!
+        //!test doxy
+        //!
     Pixel getPix (unsigned int x, unsigned int y) const;
 
         // Mutateur : modifie le pixel de coordonnées (x,y)
