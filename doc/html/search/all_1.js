@@ -1,8 +1,4 @@
 var searchData=
 [
-<<<<<<< HEAD
-  ['pixel_1',['Pixel',['../class_pixel.html',1,'']]]
-=======
-  ['pixel_0',['Pixel',['../class_pixel.html',1,'']]]
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
+  ['dessinerrectangle_1',['dessinerRectangle',['../class_image.html#ae18101e02b43b2a2285776412cf92936',1,'Image']]]
 ];

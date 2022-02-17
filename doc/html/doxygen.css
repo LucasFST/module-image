@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 /* The standard CSS for doxygen 1.8.17 */
-=======
-/* The standard CSS for doxygen 1.9.3 */
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 
 body, table, div, p, dl {
 	font: 400 14px/22px Roboto,sans-serif;
@@ -70,11 +66,7 @@ p.startli, p.startdd {
 	margin-top: 2px;
 }
 
-<<<<<<< HEAD
 th p.starttd, p.intertd, p.endtd {
-=======
-th p.starttd, th p.intertd, th p.endtd {
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
         font-size: 100%;
         font-weight: 700;
 }
@@ -111,7 +103,6 @@ caption {
 }
 
 span.legend {
-<<<<<<< HEAD
         font-size: 70%;
         text-align: center;
 }
@@ -136,98 +127,6 @@ div.navtab {
 	margin-right: 15px;
 }
 
-=======
-	font-size: 70%;
-	text-align: center;
-}
-
-h3.version {
-	font-size: 90%;
-	text-align: center;
-}
-
-div.navtab {
-	border-right: 1px solid #A3B4D7;
-	padding-right: 15px;
-	text-align: right;
-	line-height: 110%;
-}
-
-div.navtab table {
-	border-spacing: 0;
-}
-
-td.navtab {
-	padding-right: 6px;
-	padding-left: 6px;
-}
-td.navtabHL {
-	background-image: url('tab_a.png');
-	background-repeat:repeat-x;
-	padding-right: 6px;
-	padding-left: 6px;
-}
-
-td.navtabHL a, td.navtabHL a:visited {
-	color: #fff;
-	text-shadow: 0px 1px 1px rgba(0, 0, 0, 1.0);
-}
-
-a.navtab {
-	font-weight: bold;
-}
-
-div.qindex{
-	text-align: center;
-	width: 100%;
-	line-height: 140%;
-	font-size: 130%;
-	color: #A0A0A0;
-}
-
-dt.alphachar{
-	font-size: 180%;
-	font-weight: bold;
-}
-
-.alphachar a{
-	color: black;
-}
-
-.alphachar a:hover, .alphachar a:visited{
-	text-decoration: none;
-}
-
-.classindex dl {
-	padding: 25px;
-	column-count:1
-}
-
-.classindex dd {
-	display:inline-block;
-	margin-left: 50px;
-	width: 90%;
-	line-height: 1.15em;
-}
-
-.classindex dl.odd {
-	background-color: #F8F9FC;
-}
-
-@media(min-width: 1120px) {
-	.classindex dl {
-		column-count:2
-	}
-}
-
-@media(min-width: 1320px) {
-	.classindex dl {
-		column-count:3
-	}
-}
-
-
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 /* @group Link Styling */
 
 a {
@@ -244,7 +143,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-<<<<<<< HEAD
 a.qindex {
 	font-weight: bold;
 }
@@ -256,8 +154,6 @@ a.qindexHL {
 	border: 1px double #869DCA;
 }
 
-=======
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 .contents a.qindexHL:visited {
         color: #FFFFFF;
 }
@@ -277,36 +173,6 @@ a.codeRef, a.codeRef:visited, a.lineRef, a.lineRef:visited {
 	color: #4665A2; 
 }
 
-<<<<<<< HEAD
-=======
-a.code.hl_class { /* style for links to class names in code snippets */ }
-a.code.hl_struct { /* style for links to struct names in code snippets */ }
-a.code.hl_union { /* style for links to union names in code snippets */ }
-a.code.hl_interface { /* style for links to interface names in code snippets */ }
-a.code.hl_protocol { /* style for links to protocol names in code snippets */ }
-a.code.hl_category { /* style for links to category names in code snippets */ }
-a.code.hl_exception { /* style for links to exception names in code snippets */ }
-a.code.hl_service { /* style for links to service names in code snippets */ }
-a.code.hl_singleton { /* style for links to singleton names in code snippets */ }
-a.code.hl_concept { /* style for links to concept names in code snippets */ }
-a.code.hl_namespace { /* style for links to namespace names in code snippets */ }
-a.code.hl_package { /* style for links to package names in code snippets */ }
-a.code.hl_define { /* style for links to macro names in code snippets */ }
-a.code.hl_function { /* style for links to function names in code snippets */ }
-a.code.hl_variable { /* style for links to variable names in code snippets */ }
-a.code.hl_typedef { /* style for links to typedef names in code snippets */ }
-a.code.hl_enumvalue { /* style for links to enum value names in code snippets */ }
-a.code.hl_enumeration { /* style for links to enumeration names in code snippets */ }
-a.code.hl_signal { /* style for links to Qt signal names in code snippets */ }
-a.code.hl_slot { /* style for links to Qt slot names in code snippets */ }
-a.code.hl_friend { /* style for links to friend names in code snippets */ }
-a.code.hl_dcop { /* style for links to KDE3 DCOP names in code snippets */ }
-a.code.hl_property { /* style for links to property names in code snippets */ }
-a.code.hl_event { /* style for links to event names in code snippets */ }
-a.code.hl_sequence { /* style for links to sequence names in code snippets */ }
-a.code.hl_dictionary { /* style for links to dictionary names in code snippets */ }
-
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 /* @end */
 
 dl.el {
@@ -314,11 +180,7 @@ dl.el {
 }
 
 ul {
-<<<<<<< HEAD
   overflow: hidden; /*Fixed: list item bullets overlap floating elements*/
-=======
-  overflow: visible;
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 }
 
 #side-nav ul {
@@ -396,10 +258,6 @@ div.line.glow {
 
 span.lineno {
 	padding-right: 4px;
-<<<<<<< HEAD
-=======
-        margin-right: 9px;
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 	text-align: right;
 	border-right: 2px solid #0F0;
 	background-color: #E8E8E8;
@@ -526,15 +384,6 @@ img.footer {
 	vertical-align: middle;
 }
 
-<<<<<<< HEAD
-=======
-.compoundTemplParams {
-	color: #4665A2;
-	font-size: 80%;
-	line-height: 120%;
-}
-
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 /* @group Code Colorization */
 
 span.keyword {
@@ -1418,14 +1267,6 @@ dl.section dd {
 }
 
 
-<<<<<<< HEAD
-=======
-#projectrow
-{
-	height: 56px;
-}
-
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 #projectlogo
 {
 	text-align: center;
@@ -1441,30 +1282,18 @@ dl.section dd {
 #projectalign
 {
         vertical-align: middle;
-<<<<<<< HEAD
-=======
-        padding-left: 0.5em;
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 }
 
 #projectname
 {
-<<<<<<< HEAD
 	font: 300% Tahoma, Arial,sans-serif;
-=======
-	font: 200% Tahoma, Arial,sans-serif;
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 	margin: 0px;
 	padding: 2px 0px;
 }
     
 #projectbrief
 {
-<<<<<<< HEAD
 	font: 120% Tahoma, Arial,sans-serif;
-=======
-	font: 90% Tahoma, Arial,sans-serif;
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 	margin: 0px;
 	padding: 0px;
 }
@@ -1529,19 +1358,10 @@ dl.citelist dt {
         font-weight:bold;
         margin-right:10px;
         padding:5px;
-<<<<<<< HEAD
 }
 
 dl.citelist dd {
         margin:2px 0;
-=======
-        text-align:right;
-        width:52px;
-}
-
-dl.citelist dd {
-        margin:2px 0 2px 72px;
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
         padding:5px 0;
 }
 
@@ -1604,19 +1424,6 @@ div.toc li.level4 {
         margin-left: 45px;
 }
 
-<<<<<<< HEAD
-=======
-span.emoji {
-        /* font family used at the site: https://unicode.org/emoji/charts/full-emoji-list.html
-         * font-family: "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;
-         */
-}
-
-span.obfuscator {
-  display: none;
-}
-
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 .PageDocRTL-title div.toc li.level1 {
   margin-left: 0 !important;
   margin-right: 0;
@@ -1671,11 +1478,7 @@ tr.heading h2 {
 
 #powerTip {
 	cursor: default;
-<<<<<<< HEAD
 	white-space: nowrap;
-=======
-	/*white-space: nowrap;*/
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 	background-color: white;
 	border: 1px solid gray;
 	border-radius: 4px 4px 4px 4px;
@@ -1858,7 +1661,6 @@ tr.heading h2 {
 
 /* @group Markdown */
 
-<<<<<<< HEAD
 /*
 table.markdownTable {
 	border-collapse:collapse;
@@ -1900,8 +1702,6 @@ th.markdownTableHeadCenter {
 }
 */
 
-=======
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 table.markdownTable {
 	border-collapse:collapse;
         margin-top: 4px;
@@ -1958,13 +1758,6 @@ table.DocNodeLTR {
    margin-left: 0;
 }
 
-<<<<<<< HEAD
-=======
-code.JavaDocCode
-  direction:ltr;
-}
-
->>>>>>> be274f1c8cec8328473b3bb28d851cb1a12ce1fb
 tt, code, kbd, samp
 {
   display: inline-block;
