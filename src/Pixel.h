@@ -9,28 +9,61 @@ class Pixel
 {
 	public :
 
-	// Constructeur par défaut de la classe: initialise le pixel à la couleur noire
+    /**
+     * @brief   Constructeur par défaut de la classe : initialise le pixel à la couleur noire
+    */
+
    Pixel ();
 
-   // Constructeur de la classe: initialise r,g,b avec les paramètres
+    /**
+     * @brief   Constructeur de la classe : initialise r,g,b avec les paramètres
+     * @param[in] nr un entier strictement positif <=255 représentant le pixel rouge
+     * @param[in] nv un entier strictement positif <=255 représentant le pixel vert 
+     * @param[in] nb un entier strictement positif <=255 représentant le pixel bleu
+    */
+
    Pixel (unsigned int nr, unsigned int ng, unsigned int nb);
 
-   // Accesseur : récupère la composante rouge du pixel
+    /**
+     * @brief   Accesseur : récupère la composante rouge du pixel
+     * @return unsigned int (entier compris entre 0 et 255)     
+    */
+
    unsigned int getRouge () const;
 
-   // Accesseur : récupère la composante verte du pixel
+    /**
+     * @brief   Accesseur : récupère la composante vert du pixel
+     * @return unsigned int (entier compris entre 0 et 255)       
+    */
+
    unsigned int getVert () const;
 
-   // Accesseur : récupère la composante bleue du pixel
+    /**
+     * @brief   Accesseur : récupère la composante bleu du pixel
+     * @return unsigned int (entier compris entre 0 et 255)       
+    */
+
    unsigned int getBleu () const;
 
-   // Mutateur : modifie la composante rouge du pixel
+    /**
+     * @brief  Mutateur : modifie la composante rouge du pixel
+     * @return void     
+    */
+
    void setRouge (unsigned int nr);
 
-   // Mutateur : modifie la composante verte du pixel
+    /**
+     * @brief  Mutateur : modifie la composante vert du pixel
+     * @return void     
+    */
+
    void setVert (unsigned int ng);
 
-   // Mutateur : modifie la composante bleue du pixel
+    /**
+     * @brief  Mutateur : modifie la composante bleu du pixel
+     * @return void     
+    */   
+
    void setBleu (unsigned int nb);
 
    private :
