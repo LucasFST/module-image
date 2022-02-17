@@ -15,7 +15,7 @@ class Image {
         // Constructeur par défaut de la classe: initialise dimx et dimy à 0
         // ce constructeur n'alloue pas de pixel
         /**
-        * @brief test
+        * @brief test ta mere la pute 
         */
     Image ();
 
