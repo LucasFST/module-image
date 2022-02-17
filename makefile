@@ -1,22 +1,39 @@
-all : executable.out #doit compiler les différents mains --> test / exemple / .... et dans les bons fichiers
+.PHONY: veryclean clean all
+CC := g++
+CCFLAGS := -g -Wall
+OBJS1 := Pixel.o Image.o
+OBJS2 := Pixel.h Image.h
+BIN := ./bin
+BIN1 := ./bin/test
+BIN2 := ./bin/exemple
 
-executable.out : mainTest.o Pixel.o Image.o
-	g++ -g -Wall mainTest.o Pixel.o Image.o -o executable.out
+all : $(BIN1) $(BIN2) 
 
-mainTest.o : mainTest.cpp Pixel.h Image.h
-	g++ -g -Wall -c mainTest.cpp
+$(BIN1) : mainTest.o $(OBJS1)
+	$(CC) $(CCFLAGS) mainTest.o $(OBJS1) -o $(BIN1)
 
-Image.o : Image.cpp Image.h Pixel.h
-	g++ -g -Wall -c Image.cpp
+$(BIN2) : mainExemple.o $(OBJS1)
+	$(CC) $(CCFLAGS) mainExemple.o $(OBJS1) -o $(BIN2)
+
+mainTest.o : mainTest.cpp $(OBJS2)
+	$(CC) $(CCFLAGS) -Isrc -c mainTest.cpp
+
+mainExemple.o : mainExemple.cpp $(OBJS2)
+	$(CC) $(CCFLAGS) -Isrc -c mainExemple.cpp
+
+Image.o : Image.cpp $(OBJS2)
+	$(CC) $(CCFLAGS) -Isrc -c Image.cpp
 
 Pixel.o : Pixel.cpp Pixel.h
-	g++ -g -Wall -c Pixel.cpp
+	$(CC) $(CCFLAGS) -Isrc -c Pixel.cpp
+
+veryclean : clean
+	rm -rf $(BIN)
 
 clean :
-	rm *.o
+	rm $(BIN)/*.o
 
-veryclean : 
-	clean rm *.out
 
-# Factoriser le makefile avec des variables
+
+
 

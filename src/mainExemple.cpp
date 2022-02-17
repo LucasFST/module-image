@@ -1,41 +1,7 @@
 #include "Image.h"
 
 using namespace std;
- 
-/*
 
-int main() 
-{
-   Image monImage;
-   monImage.testRegression();
-   return 0;
-}
-
-*/
-
-
-/*
-
-int main()
-{
-   Image img(2,3);
-   Pixel bleu (0, 128, 255);
-   Pixel vert (4, 200, 10);
-   string fichierTest;
-   fichierTest = "Test.txt";
-   img.dessinerRectangle(0,0,1,0, bleu);
-   img.dessinerRectangle(0,1,1,2, vert);
-   img.afficherConsole();
-   img.sauver(fichierTest);
-   img.ouvrir(fichierTest);
-   img.afficherConsole();
-   return 0;
-}
-
-*/
-
-//Ne marchera en l'état qu'après avoir créer les répertoires et sous répertoires (genre data ect)
- 
 int main() {
  
     Pixel blanc (255, 255, 255);
@@ -57,3 +23,4 @@ int main() {
  
     return 0;
 }
+
