@@ -73,38 +73,38 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a58edd1c45b4faeb5f789b0d036d02313"><td class="memItemLeft" align="right" valign="top"><a id="a58edd1c45b4faeb5f789b0d036d02313" name="a58edd1c45b4faeb5f789b0d036d02313"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Image</b> ()</td></tr>
-<tr class="memdesc:a58edd1c45b4faeb5f789b0d036d02313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut de la classe: initialise dimx et dimy à 0, ce constructeur n'alloue pas de pixel. <br /></td></tr>
+<tr class="memdesc:a58edd1c45b4faeb5f789b0d036d02313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut de la classe : initialise dimx et dimy à 0, ce constructeur n'alloue pas de pixel. <br /></td></tr>
 <tr class="separator:a58edd1c45b4faeb5f789b0d036d02313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ee63d37f01ef80f9d8ed5bf8e6fe10d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a3ee63d37f01ef80f9d8ed5bf8e6fe10d">Image</a> (unsigned int dimx, unsigned int dimy)</td></tr>
-<tr class="memdesc:a3ee63d37f01ef80f9d8ed5bf8e6fe10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe: initialise dimx et dimy (après vérification), puis alloue le tableau de pixel dans le tas (image noire)  <a href="class_image.html#a3ee63d37f01ef80f9d8ed5bf8e6fe10d">More...</a><br /></td></tr>
+<tr class="memdesc:a3ee63d37f01ef80f9d8ed5bf8e6fe10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe : initialise dimx et dimy (après vérification), puis alloue le tableau de pixel dans le tas (image noire)  <a href="class_image.html#a3ee63d37f01ef80f9d8ed5bf8e6fe10d">More...</a><br /></td></tr>
 <tr class="separator:a3ee63d37f01ef80f9d8ed5bf8e6fe10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0294f63700543e11c0f0da85601c7ae5"><td class="memItemLeft" align="right" valign="top"><a id="a0294f63700543e11c0f0da85601c7ae5" name="a0294f63700543e11c0f0da85601c7ae5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~Image</b> ()</td></tr>
-<tr class="memdesc:a0294f63700543e11c0f0da85601c7ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de la classe: déallocation de la mémoire du tableau de pixel et mise à jour des champs dimx et dimy à 0. <br /></td></tr>
+<tr class="memdesc:a0294f63700543e11c0f0da85601c7ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de la classe : déallocation de la mémoire du tableau de pixel et mise à jour des champs dimx et dimy à 0. <br /></td></tr>
 <tr class="separator:a0294f63700543e11c0f0da85601c7ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2c1f02bdf9178459b5bb7409ab86648"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_pixel.html">Pixel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#aa2c1f02bdf9178459b5bb7409ab86648">getPix</a> (unsigned int x, unsigned int y) const</td></tr>
 <tr class="memdesc:aa2c1f02bdf9178459b5bb7409ab86648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesseur : récupère le pixel original de coordonnées (x,y) en vérifiant leur validité  <a href="class_image.html#aa2c1f02bdf9178459b5bb7409ab86648">More...</a><br /></td></tr>
 <tr class="separator:aa2c1f02bdf9178459b5bb7409ab86648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a713c922e13a0a05ac88bef756b4ca90d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a713c922e13a0a05ac88bef756b4ca90d">setPix</a> (unsigned int x, unsigned int y, const <a class="el" href="class_pixel.html">Pixel</a> &amp;couleur)</td></tr>
-<tr class="memdesc:a713c922e13a0a05ac88bef756b4ca90d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutateur : modifie la couleur du pixel de coordonnées (x,y)  <a href="class_image.html#a713c922e13a0a05ac88bef756b4ca90d">More...</a><br /></td></tr>
+<tr class="memdesc:a713c922e13a0a05ac88bef756b4ca90d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutateur : modifie la couleur du pixel de coordonnées (x,y) en vérifiant leur validité  <a href="class_image.html#a713c922e13a0a05ac88bef756b4ca90d">More...</a><br /></td></tr>
 <tr class="separator:a713c922e13a0a05ac88bef756b4ca90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae18101e02b43b2a2285776412cf92936"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#ae18101e02b43b2a2285776412cf92936">dessinerRectangle</a> (unsigned int Xmin, unsigned int Ymin, unsigned int Xmax, unsigned int Ymax, const <a class="el" href="class_pixel.html">Pixel</a> &amp;couleur)</td></tr>
-<tr class="memdesc:ae18101e02b43b2a2285776412cf92936"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine un rectangle plein de la couleur dans l'image.  <a href="class_image.html#ae18101e02b43b2a2285776412cf92936">More...</a><br /></td></tr>
+<tr class="memdesc:ae18101e02b43b2a2285776412cf92936"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine un rectangle plein de la couleur désirée dans l'image.  <a href="class_image.html#ae18101e02b43b2a2285776412cf92936">More...</a><br /></td></tr>
 <tr class="separator:ae18101e02b43b2a2285776412cf92936"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d0c277a049c0ea1da7ba2dd2131c31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a62d0c277a049c0ea1da7ba2dd2131c31">effacer</a> (const <a class="el" href="class_pixel.html">Pixel</a> &amp;couleur)</td></tr>
-<tr class="memdesc:a62d0c277a049c0ea1da7ba2dd2131c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Efface l'image en la remplissant de la couleur en paramètre.  <a href="class_image.html#a62d0c277a049c0ea1da7ba2dd2131c31">More...</a><br /></td></tr>
+<tr class="memdesc:a62d0c277a049c0ea1da7ba2dd2131c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Efface l'image en la remplissant de la couleur passée en paramètre.  <a href="class_image.html#a62d0c277a049c0ea1da7ba2dd2131c31">More...</a><br /></td></tr>
 <tr class="separator:a62d0c277a049c0ea1da7ba2dd2131c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82ffef6c89927b0cc755a3fe2fec637b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a82ffef6c89927b0cc755a3fe2fec637b">testRegression</a> ()</td></tr>
 <tr class="memdesc:a82ffef6c89927b0cc755a3fe2fec637b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue une série de tests vérifiant que le module fonctionne et que les données membres de l'objet sont conformes.  <a href="class_image.html#a82ffef6c89927b0cc755a3fe2fec637b">More...</a><br /></td></tr>
 <tr class="separator:a82ffef6c89927b0cc755a3fe2fec637b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af870cb0c00a370927e6957f99a409586"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#af870cb0c00a370927e6957f99a409586">sauver</a> (const string &amp;filename) const</td></tr>
-<tr class="memdesc:af870cb0c00a370927e6957f99a409586"><td class="mdescLeft">&#160;</td><td class="mdescRight">sauver une image dans un fichier  <a href="class_image.html#af870cb0c00a370927e6957f99a409586">More...</a><br /></td></tr>
+<tr class="memdesc:af870cb0c00a370927e6957f99a409586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sauver une image dans un fichier.  <a href="class_image.html#af870cb0c00a370927e6957f99a409586">More...</a><br /></td></tr>
 <tr class="separator:af870cb0c00a370927e6957f99a409586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a504778b71d66c4da931cad497e2ec249"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a504778b71d66c4da931cad497e2ec249">ouvrir</a> (const string &amp;filename)</td></tr>
-<tr class="memdesc:a504778b71d66c4da931cad497e2ec249"><td class="mdescLeft">&#160;</td><td class="mdescRight">ouvrir une image depuis un fichier  <a href="class_image.html#a504778b71d66c4da931cad497e2ec249">More...</a><br /></td></tr>
+<tr class="memdesc:a504778b71d66c4da931cad497e2ec249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ouvrir une image depuis un fichier.  <a href="class_image.html#a504778b71d66c4da931cad497e2ec249">More...</a><br /></td></tr>
 <tr class="separator:a504778b71d66c4da931cad497e2ec249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3cc6f7401625c11dcd5ef003f37e4fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#aa3cc6f7401625c11dcd5ef003f37e4fa">afficherConsole</a> ()</td></tr>
-<tr class="memdesc:aa3cc6f7401625c11dcd5ef003f37e4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">afficher les valeurs des pixels sur la console  <a href="class_image.html#aa3cc6f7401625c11dcd5ef003f37e4fa">More...</a><br /></td></tr>
+<tr class="memdesc:aa3cc6f7401625c11dcd5ef003f37e4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher les composantes RGB des pixels sur la console.  <a href="class_image.html#aa3cc6f7401625c11dcd5ef003f37e4fa">More...</a><br /></td></tr>
 <tr class="separator:aa3cc6f7401625c11dcd5ef003f37e4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -134,7 +134,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructeur de la classe: initialise dimx et dimy (après vérification), puis alloue le tableau de pixel dans le tas (image noire) </p>
+<p>Constructeur de la classe : initialise dimx et dimy (après vérification), puis alloue le tableau de pixel dans le tas (image noire) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dimx</td><td>la dimension en abcsisse de notre image </td></tr>
@@ -161,7 +161,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>afficher les valeurs des pixels sur la console </p>
+<p>Afficher les composantes RGB des pixels sur la console. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
@@ -210,7 +210,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Dessine un rectangle plein de la couleur dans l'image. </p>
+<p>Dessine un rectangle plein de la couleur désirée dans l'image. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">Xmin</td><td>la composante x du coin haut gauche <br  />
@@ -218,7 +218,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">Ymin</td><td>la composante y du coin haut gauche </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">Xmax</td><td>la composante x du coin bas droite </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">Ymax</td><td>la composante x du coin bas droite </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">couleur</td><td>la couleur en code RGB de notre pixel </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">couleur</td><td>un pixel de la couleur du rectangle désiré (attention : en mode donnée/résultat mais CONST) </td></tr>
   </table>
   </dd>
 </dl>
@@ -242,10 +242,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Efface l'image en la remplissant de la couleur en paramètre. </p>
+<p>Efface l'image en la remplissant de la couleur passée en paramètre. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">couleur</td><td>la couleur en code RGB de notre pixel </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">couleur</td><td>un pixel de la couleur désirée (attention : en mode donnée/résultat mais CONST) </td></tr>
   </table>
   </dd>
 </dl>
@@ -307,10 +307,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>ouvrir une image depuis un fichier </p>
+<p>Ouvrir une image depuis un fichier. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">filename</td><td>chemin/nom de l'image à ouvrir </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">filename</td><td>chemin/nom de l'image à ouvrir (attention : en mode donnée/résultat mais CONST) </td></tr>
   </table>
   </dd>
 </dl>
@@ -334,10 +334,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>sauver une image dans un fichier </p>
+<p>Sauver une image dans un fichier. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">filename</td><td>nom de l'image à sauvegarder </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">filename</td><td>nom de l'image à sauvegarder (attention : en mode donnée/résultat mais CONST) </td></tr>
   </table>
   </dd>
 </dl>
@@ -377,12 +377,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Mutateur : modifie la couleur du pixel de coordonnées (x,y) </p>
+<p>Mutateur : modifie la couleur du pixel de coordonnées (x,y) en vérifiant leur validité </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">dimx</td><td>la dimension en abcsisse de notre image </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dimy</td><td>la dimension en ordonnée de notre image </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">couleur</td><td>la couleur en code RGB de notre pixel </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>la coordonnée x du pixel </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>la coordonnée y du pixel </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">couleur</td><td>un pixel de la nouvelle couleur désirée (attention : en mode donnée/résultat mais CONST) </td></tr>
   </table>
   </dd>
 </dl>
