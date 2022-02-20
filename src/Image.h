@@ -14,14 +14,14 @@ class Image {
     public:
       
         /**
-        * @brief Constructeur par défaut de la classe: initialise dimx et dimy à 0, ce constructeur n'alloue pas de pixel
+        * @brief Constructeur par défaut de la classe : initialise dimx et dimy à 0, ce constructeur n'alloue pas de pixel
         */
         Image ();
 
     
 
         /**
-        *   @brief  Constructeur de la classe: initialise dimx et dimy (après vérification), puis alloue le tableau de pixel dans le tas (image noire)
+        *   @brief  Constructeur de la classe : initialise dimx et dimy (après vérification), puis alloue le tableau de pixel dans le tas (image noire)
         *   @param[in] dimx la dimension en abcsisse de notre image 
         *   @param[in] dimy la dimension en ordonnée de notre image 
         */
@@ -31,7 +31,7 @@ class Image {
 
       
         /**
-        *   @brief  Destructeur de la classe: déallocation de la mémoire du tableau de pixel et mise à jour des champs dimx et dimy à 0
+        *   @brief  Destructeur de la classe : déallocation de la mémoire du tableau de pixel et mise à jour des champs dimx et dimy à 0
         */
         ~Image ();
 
@@ -48,31 +48,30 @@ class Image {
 
       
         /**
-        *   @brief   Mutateur : modifie la couleur du pixel de coordonnées (x,y)
-        *   @param[in] dimx la dimension en abcsisse de notre image 
-        *   @param[in] dimy la dimension en ordonnée de notre image
-        *   @param[in,out] couleur la couleur en code RGB de notre pixel 
+        *   @brief   Mutateur : modifie la couleur du pixel de coordonnées (x,y) en vérifiant leur validité
+        *   @param[in] x la coordonnée x du pixel
+        *   @param[in] y la coordonnée y du pixel
+        *   @param[in,out] couleur un pixel de la nouvelle couleur désirée (attention : en mode donnée/résultat mais CONST)
         *   @return void 
         */
-    void setPix (unsigned int x, unsigned int y, const Pixel& couleur );
+        void setPix (unsigned int x, unsigned int y, const Pixel& couleur );
 
 
-        //Dessine un rectangle plein de la couleur dans l'image (en utilisant setPix, indices en paramètre compris)
         /**
-        *   @brief   Dessine un rectangle plein de la couleur dans l'image 
+        *   @brief   Dessine un rectangle plein de la couleur désirée dans l'image 
         *   @param[in] Xmin la composante x du coin haut gauche  
         *   @param[in] Ymin la composante y du coin haut gauche 
         *   @param[in] Xmax la composante x du coin bas droite
         *   @param[in] Ymax la composante x du coin bas droite 
-        *   @param[in,out] couleur la couleur en code RGB de notre pixel 
+        *   @param[in,out] couleur un pixel de la couleur du rectangle désiré (attention : en mode donnée/résultat mais CONST)
         *   @return void 
         */
     void dessinerRectangle (unsigned int Xmin, unsigned int Ymin, unsigned int Xmax, unsigned int Ymax, const Pixel& couleur );
 
         
         /**
-        *   @brief Efface l'image en la remplissant de la couleur en paramètre 
-        *   @param[in,out] couleur la couleur en code RGB de notre pixel 
+        *   @brief Efface l'image en la remplissant de la couleur passée en paramètre 
+        *   @param[in,out] couleur un pixel de la couleur désirée (attention : en mode donnée/résultat mais CONST) 
         *   @return void 
         */
     void effacer (const Pixel& couleur);
@@ -86,23 +85,23 @@ class Image {
 
         
         /**
-        *   @brief sauver une image dans un fichier
-        *   @param[in,out] filename nom de l'image à sauvegarder
+        *   @brief Sauver une image dans un fichier
+        *   @param[in,out] filename nom de l'image à sauvegarder (attention : en mode donnée/résultat mais CONST)
         *   @return void 
         */
    void sauver(const string& filename) const;
 
-        //ouvrir une image depuis un fichier
+
         /**
-        *   @brief ouvrir une image depuis un fichier
-        *   @param[in,out] filename chemin/nom de l'image à ouvrir
+        *   @brief Ouvrir une image depuis un fichier
+        *   @param[in,out] filename chemin/nom de l'image à ouvrir (attention : en mode donnée/résultat mais CONST)
         *   @return void 
         */
    void ouvrir(const string& filename);
 
-        
+
         /**
-        *   @brief afficher les valeurs des pixels sur la console
+        *   @brief Afficher les composantes RGB des pixels sur la console
         *   @return void 
         */
    void afficherConsole();
