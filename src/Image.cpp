@@ -119,17 +119,13 @@ void Image::testRegression ()
 void Image::sauver(const string & filename) const {
     ofstream fichier (filename.c_str());
     assert(fichier.is_open());
-    //fichier << "P3" << endl;  
     fichier << dimx << " " << dimy << endl;
-    //fichier << "255" << endl; 
-    for(unsigned int y=0; y<dimy; y++) //y++
-        //{
-        for(unsigned int x=0; x<dimx; x++) //x++
+    for(unsigned int y=0; y<dimy; y++) 
+        for(unsigned int x=0; x<dimx; x++) 
          {
-            Pixel pix = getPix(x,y); //Pixel& to Pixel
-            fichier << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " "; //accesseurs
+            Pixel pix = getPix(x,y); 
+            fichier << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " "; 
         }
-        //}
     cout << "Sauvegarde de l'image " << filename << " ... OK\n";
     fichier.close();
 }
@@ -137,35 +133,33 @@ void Image::sauver(const string & filename) const {
 void Image::ouvrir(const string & filename) {
     ifstream fichier (filename.c_str());
     assert(fichier.is_open());
-    string r,g,b; //char to string
+    string r,g,b; 
     string mot;
-    dimx = dimy = 0; //séparer les =
-    fichier /*>> mot*/ >> dimx >> dimy /*>> mot*/; //mot servait à enlever P3 et 255
+    dimx = dimy = 0; 
+    fichier >> dimx >> dimy; 
     assert(dimx > 0 && dimy > 0);
     if (tab != NULL) delete [] tab;
     tab = new Pixel [dimx*dimy];
-    for(unsigned int y=0; y<dimy; y++) //y++
-        //{
-        for(unsigned int x=0; x<dimx; x++) //x++
+    for(unsigned int y=0; y<dimy; y++) 
+        for(unsigned int x=0; x<dimx; x++) 
         {
-            fichier >> r >> g >> b;  //inverser b et g
+            fichier >> r >> g >> b;  
             Pixel couleur(stoi(r),stoi(g), stoi(b)); //stoi() string to int (unsigned int ça serait mieux)
-            setPix(x,y,couleur);   //getPix to setPix
+            setPix(x,y,couleur);   
             setPix(x,y,couleur);
             setPix(x,y,couleur);
         }
-        //}
     fichier.close();
     cout << "Lecture de l'image " << filename << " ... OK\n";
 }
 
 void Image::afficherConsole(){
     cout << dimx << " " << dimy << endl;
-    for(unsigned int y=0; y<dimy; y++) //y++
+    for(unsigned int y=0; y<dimy; y++) 
     {
-        for(unsigned int x=0; x<dimx; x++) //x++ 
+        for(unsigned int x=0; x<dimx; x++) 
         {
-            Pixel pix = getPix(x,y); //Pixel& to Pixel
+            Pixel pix = getPix(x,y); 
             cout << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
         cout << endl;
