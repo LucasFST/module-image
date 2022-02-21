@@ -5,6 +5,9 @@
 
 using namespace std;
 
+/**
+*   @author {Faustmann Lucas; Brossat Pierrick}
+*/
 class Pixel
 {
 	public :
@@ -20,6 +23,7 @@ class Pixel
      * @param[in] nr un entier strictement positif <=255 représentant le pixel rouge
      * @param[in] nv un entier strictement positif <=255 représentant le pixel vert 
      * @param[in] nb un entier strictement positif <=255 représentant le pixel bleu
+     * @remark nr, ng et nb doivent être inferieur à 255
     */
 
    Pixel (unsigned int nr, unsigned int ng, unsigned int nb);
@@ -48,13 +52,15 @@ class Pixel
     /**
      * @brief  Mutateur : modifie la composante rouge du pixel
      * @return void     
+     * @remark nr doit être inferieur à 255
     */
 
    void setRouge (unsigned int nr);
 
     /**
      * @brief  Mutateur : modifie la composante vert du pixel
-     * @return void     
+     * @return void   
+    * @remark ng doit être inferieur à 255
     */
 
    void setVert (unsigned int ng);
@@ -62,6 +68,7 @@ class Pixel
     /**
      * @brief  Mutateur : modifie la composante bleu du pixel
      * @return void     
+     * @remark nb doit être inferieur à 255
     */   
 
    void setBleu (unsigned int nb);

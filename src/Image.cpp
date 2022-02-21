@@ -119,9 +119,9 @@ void Image::testRegression ()
 void Image::sauver(const string & filename) const {
     ofstream fichier (filename.c_str());
     assert(fichier.is_open());
-    //fichier << "P3" << endl;  //A quoi ça sert zebi ? A rien ?
+    //fichier << "P3" << endl;  
     fichier << dimx << " " << dimy << endl;
-    //fichier << "255" << endl; //A quoi ça sert zebi ? A rien ?
+    //fichier << "255" << endl; 
     for(unsigned int y=0; y<dimy; y++) //y++
         //{
         for(unsigned int x=0; x<dimx; x++) //x++

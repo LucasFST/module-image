@@ -5,6 +5,9 @@
 #include <iostream>
 using namespace std;
 
+/**
+*   @author {Faustmann Lucas; Brossat Pierrick}
+*/
 class Image {
 
     private:
@@ -24,6 +27,7 @@ class Image {
         *   @brief  Constructeur de la classe : initialise dimx et dimy (après vérification), puis alloue le tableau de pixel dans le tas (image noire)
         *   @param[in] dimx la dimension en abcsisse de notre image 
         *   @param[in] dimy la dimension en ordonnée de notre image 
+        *   @remark dimx et dimy ne peuvent être superieur ou egal à 50000 (limite arbitraire)
         */
         Image (unsigned int dimx, unsigned int dimy);
 
@@ -41,6 +45,7 @@ class Image {
         *   @brief   Accesseur : récupère le pixel original de coordonnées (x,y) en vérifiant leur validité
         *   @param[in] x la coordonnée x du pixel
         *   @param[in] y la coordonnée y du pixel
+        *   @remark x et y doivent être inferieur strictement à dimx et dimy respectivement 
         *   @return Pixel 
         */
         Pixel getPix (unsigned int x, unsigned int y) const;
@@ -52,6 +57,7 @@ class Image {
         *   @param[in] x la coordonnée x du pixel
         *   @param[in] y la coordonnée y du pixel
         *   @param[in,out] couleur un pixel de la nouvelle couleur désirée (attention : en mode donnée/résultat mais CONST)
+        *   @remark x et y doivent être inferieur strictement à dimx et dimy respectivement 
         *   @return void 
         */
         void setPix (unsigned int x, unsigned int y, const Pixel& couleur );
@@ -88,6 +94,7 @@ class Image {
         *   @brief Sauver une image dans un fichier
         *   @param[in,out] filename nom de l'image à sauvegarder (attention : en mode donnée/résultat mais CONST)
         *   @return void 
+        *   @remark beaucoup de conditions relatives à chaque teste que l'on fait dans cette procédure
         */
    void sauver(const string& filename) const;
 
