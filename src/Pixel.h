@@ -20,10 +20,10 @@ class Pixel
 
     /**
      * @brief   Constructeur de la classe : initialise r,g,b avec les paramètres
-     * @param[in] nr un entier strictement positif <=255 représentant le pixel rouge
-     * @param[in] nv un entier strictement positif <=255 représentant le pixel vert 
-     * @param[in] nb un entier strictement positif <=255 représentant le pixel bleu
-     * @remark nr, ng et nb doivent être inferieur à 255 (d'où le usigned char)
+     * @param[in] nr un entier strictement positif représentant la composante rouge du pixel
+     * @param[in] ng un entier strictement positif représentant la composante verte du pixel
+     * @param[in] nb un entier strictement positif représentant la composante bleue du pixel
+     * @remark nr, ng et nb doivent être inférieurs ou égaux à 255 (unsigned char)
     */
 
    Pixel (unsigned char nr, unsigned char ng, unsigned char nb);
@@ -33,52 +33,60 @@ class Pixel
      * @return unsigned char (entier compris entre 0 et 255)     
     */
 
-   unsigned int getRouge () const;
+   unsigned char getRouge () const;
 
     /**
+<<<<<<< HEAD
      * @brief   Accesseur : récupère la composante vert du pixel
+=======
+     * @brief   Accesseur : récupère la composante verte du pixel
+>>>>>>> e44488f388dedb849cdf1d1d2a2853e3c58e781f
      * @return unsigned char (entier compris entre 0 et 255)       
     */
 
-   unsigned int getVert () const;
+   unsigned char getVert () const;
 
     /**
+<<<<<<< HEAD
      * @brief   Accesseur : récupère la composante bleu du pixel
+=======
+     * @brief   Accesseur : récupère la composante bleue du pixel
+>>>>>>> e44488f388dedb849cdf1d1d2a2853e3c58e781f
      * @return unsigned char (entier compris entre 0 et 255)       
     */
 
-   unsigned int getBleu () const;
+   unsigned char getBleu () const;
 
     /**
      * @brief  Mutateur : modifie la composante rouge du pixel
-     * @param[in] nr un entier strictement positif représentant le pixel rouge
+     * @param[in] nr un entier strictement positif représentant la composante rouge du pixel
      * @return void     
-     * @remark nr doit être inferieur à 255 (d'où le usigned char)
+     * @remark nr doit être inférieur ou égal à 255 (unsigned char)
     */
 
    void setRouge (unsigned char nr);
 
     /**
-     * @brief  Mutateur : modifie la composante vert du pixel
-     * @param[in] ng un entier strictement positif représentant le pixel vert 
+     * @brief  Mutateur : modifie la composante verte du pixel
+     * @param[in] ng un entier strictement positif représentant la composante verte du pixel 
      * @return void   
-    * @remark ng doit être inferieur à 255 (d'où le usigned char)
+    * @remark ng doit être inférieur ou égal à 255 (usigned char)
     */
 
    void setVert (unsigned char ng);
 
     /**
-     * @brief  Mutateur : modifie la composante bleu du pixel
-     * @param[in] nb un entier strictement positif représentant le pixel bleu
+     * @brief  Mutateur : modifie la composante bleue du pixel
+     * @param[in] nb un entier strictement positif représentant la composante bleue du pixel
      * @return void     
-     * @remark nb doit être inferieur à 255 (d'où le usigned char)
+     * @remark nb doit être inférieur ou égal à 255 (usigned char)
     */   
 
    void setBleu (unsigned char nb);
 
    private :
-
-    unsigned int r,g,b;    // les composantes du pixel
+    
+    unsigned char r,g,b;    
 };
 
 #endif

@@ -37,7 +37,7 @@ Image::~Image()
 
 
 
-Pixel Image::getPix (unsigned int x,unsigned int y) const
+Pixel Image::getPix (unsigned int x,unsigned int y) const //retourne Pixel ou Pixel& ou Pixel*
 {
     assert (x<dimx && y<dimy ); //x et y doivent être respectivement plus petit que dimx et dimy
     return tab[y*dimx+x];  //formule pour passer d'un tab 2D à un tab 1D
@@ -112,6 +112,8 @@ void Image::testRegression ()
     assert(Test.getRouge()==145); //on verifie qu'il est bien de la couleur que l'on souhaite 
     assert(Test.getVert()==167);
     assert(Test.getBleu()==23);
+
+    cout<<"Test de Regression passé avec succès"<<endl;
 }
 
 
