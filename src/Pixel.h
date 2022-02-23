@@ -23,10 +23,10 @@ class Pixel
      * @param[in] nr un entier strictement positif <=255 représentant le pixel rouge
      * @param[in] nv un entier strictement positif <=255 représentant le pixel vert 
      * @param[in] nb un entier strictement positif <=255 représentant le pixel bleu
-     * @remark nr, ng et nb doivent être inferieur à 255
+     * @remark nr, ng et nb doivent être inferieur à 255 (d'où le usigned char)
     */
 
-   Pixel (unsigned int nr, unsigned int ng, unsigned int nb);
+   Pixel (unsigned char nr, unsigned char ng, unsigned char nb);
 
     /**
      * @brief   Accesseur : récupère la composante rouge du pixel
@@ -52,26 +52,26 @@ class Pixel
     /**
      * @brief  Mutateur : modifie la composante rouge du pixel
      * @return void     
-     * @remark nr doit être inferieur à 255
+     * @remark nr doit être inferieur à 255 (d'où le usigned char)
     */
 
-   void setRouge (unsigned int nr);
+   void setRouge (unsigned char nr);
 
     /**
      * @brief  Mutateur : modifie la composante vert du pixel
      * @return void   
-    * @remark ng doit être inferieur à 255
+    * @remark ng doit être inferieur à 255 (d'où le usigned char)
     */
 
-   void setVert (unsigned int ng);
+   void setVert (unsigned char ng);
 
     /**
      * @brief  Mutateur : modifie la composante bleu du pixel
      * @return void     
-     * @remark nb doit être inferieur à 255
+     * @remark nb doit être inferieur à 255 (d'où le usigned char)
     */   
 
-   void setBleu (unsigned int nb);
+   void setBleu (unsigned char nb);
 
    private :
 
