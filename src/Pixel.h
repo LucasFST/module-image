@@ -36,22 +36,14 @@ class Pixel
    unsigned char getRouge () const;
 
     /**
-<<<<<<< HEAD
-     * @brief   Accesseur : récupère la composante vert du pixel
-=======
      * @brief   Accesseur : récupère la composante verte du pixel
->>>>>>> e44488f388dedb849cdf1d1d2a2853e3c58e781f
      * @return unsigned char (entier compris entre 0 et 255)       
     */
 
    unsigned char getVert () const;
 
     /**
-<<<<<<< HEAD
-     * @brief   Accesseur : récupère la composante bleu du pixel
-=======
      * @brief   Accesseur : récupère la composante bleue du pixel
->>>>>>> e44488f388dedb849cdf1d1d2a2853e3c58e781f
      * @return unsigned char (entier compris entre 0 et 255)       
     */
 

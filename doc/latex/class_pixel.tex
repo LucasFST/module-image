@@ -8,24 +8,12 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_pixel_a27ad99a2f705e635c42d242d530d4756}\label{class_pixel_a27ad99a2f705e635c42d242d530d4756}} 
-\mbox{\hyperlink{class_pixel_a27ad99a2f705e635c42d242d530d4756}{Pixel}} ()
+{\bfseries Pixel} ()
 \begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \+: initialise le pixel à la couleur noire. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_pixel_ae14440155731c2f7e2073b7bbbd596f3}{Pixel}} (unsigned char nr, unsigned char ng, unsigned char nb)
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe \+: initialise r,g,b avec les paramètres. \end{DoxyCompactList}\item 
 unsigned char \mbox{\hyperlink{class_pixel_ab0ec14a265184c9452407394a29b65d2}{get\+Rouge}} () const
 \begin{DoxyCompactList}\small\item\em Accesseur \+: récupère la composante rouge du pixel. \end{DoxyCompactList}\item 
-<<<<<<< HEAD
-unsigned int \mbox{\hyperlink{class_pixel_a431fb781cc2cb35db18c3f07cc619afc}{get\+Vert}} () const
-\begin{DoxyCompactList}\small\item\em Accesseur \+: récupère la composante vert du pixel. \end{DoxyCompactList}\item 
-unsigned int \mbox{\hyperlink{class_pixel_a03f07bd8c0bd8afa5732b0a468cc5724}{get\+Bleu}} () const
-\begin{DoxyCompactList}\small\item\em Accesseur \+: récupère la composante bleu du pixel. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pixel_a46ffac40207a65c1481afcb2b156e433}{set\+Rouge}} (unsigned char nr)
-\begin{DoxyCompactList}\small\item\em Mutateur \+: modifie la composante rouge du pixel. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pixel_a9c0b314120976395eaec55e6d07256ca}{set\+Vert}} (unsigned char ng)
-\begin{DoxyCompactList}\small\item\em Mutateur \+: modifie la composante vert du pixel. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pixel_a706ee4cd16d1098fab21c727c90cb00b}{set\+Bleu}} (unsigned char nb)
-\begin{DoxyCompactList}\small\item\em Mutateur \+: modifie la composante bleu du pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
-=======
 unsigned char \mbox{\hyperlink{class_pixel_a35afebd6965ea07c3d3c9a4c46176676}{get\+Vert}} () const
 \begin{DoxyCompactList}\small\item\em Accesseur \+: récupère la composante verte du pixel. \end{DoxyCompactList}\item 
 unsigned char \mbox{\hyperlink{class_pixel_aa3e3cf7f2ca814ae2cfeb84cd48f3268}{get\+Bleu}} () const
@@ -36,7 +24,6 @@ void \mbox{\hyperlink{class_pixel_a9c0b314120976395eaec55e6d07256ca}{set\+Vert}}
 \begin{DoxyCompactList}\small\item\em Mutateur \+: modifie la composante verte du pixel. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_pixel_a706ee4cd16d1098fab21c727c90cb00b}{set\+Bleu}} (unsigned char nb)
 \begin{DoxyCompactList}\small\item\em Mutateur \+: modifie la composante bleue du pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
->>>>>>> e44488f388dedb849cdf1d1d2a2853e3c58e781f
 
 
 \doxysubsection{Detailed Description}
@@ -58,17 +45,6 @@ Constructeur de la classe \+: initialise r,g,b avec les paramètres.
 
 
 \begin{DoxyParams}[1]{Parameters}
-<<<<<<< HEAD
-\mbox{\texttt{ in}}  & {\em nr} & un entier strictement positif $<$=255 représentant le pixel rouge \\
-\hline
-\mbox{\texttt{ in}}  & {\em nv} & un entier strictement positif $<$=255 représentant le pixel vert \\
-\hline
-\mbox{\texttt{ in}}  & {\em nb} & un entier strictement positif $<$=255 représentant le pixel bleu \\
-\hline
-\end{DoxyParams}
-\begin{DoxyRemark}{Remarks}
-nr, ng et nb doivent être inferieur à 255 (d\textquotesingle{}où le usigned char) 
-=======
 \mbox{\texttt{ in}}  & {\em nr} & un entier strictement positif représentant la composante rouge du pixel \\
 \hline
 \mbox{\texttt{ in}}  & {\em ng} & un entier strictement positif représentant la composante verte du pixel \\
@@ -78,7 +54,6 @@ nr, ng et nb doivent être inferieur à 255 (d\textquotesingle{}où le usigned c
 \end{DoxyParams}
 \begin{DoxyRemark}{Remarks}
 nr, ng et nb doivent être inférieurs ou égaux à 255 (unsigned char) 
->>>>>>> e44488f388dedb849cdf1d1d2a2853e3c58e781f
 \end{DoxyRemark}
 
 
@@ -145,11 +120,7 @@ void ~\newline
  
 \end{DoxyReturn}
 \begin{DoxyRemark}{Remarks}
-<<<<<<< HEAD
-nb doit être inferieur à 255 (d\textquotesingle{}où le usigned char) 
-=======
 nb doit être inférieur ou égal à 255 (usigned char) 
->>>>>>> e44488f388dedb849cdf1d1d2a2853e3c58e781f
 \end{DoxyRemark}
 \mbox{\Hypertarget{class_pixel_a46ffac40207a65c1481afcb2b156e433}\label{class_pixel_a46ffac40207a65c1481afcb2b156e433}} 
 \index{Pixel@{Pixel}!setRouge@{setRouge}}
@@ -171,11 +142,7 @@ void ~\newline
  
 \end{DoxyReturn}
 \begin{DoxyRemark}{Remarks}
-<<<<<<< HEAD
-nr doit être inferieur à 255 (d\textquotesingle{}où le usigned char) 
-=======
 nr doit être inférieur ou égal à 255 (unsigned char) 
->>>>>>> e44488f388dedb849cdf1d1d2a2853e3c58e781f
 \end{DoxyRemark}
 \mbox{\Hypertarget{class_pixel_a9c0b314120976395eaec55e6d07256ca}\label{class_pixel_a9c0b314120976395eaec55e6d07256ca}} 
 \index{Pixel@{Pixel}!setVert@{setVert}}
@@ -197,11 +164,7 @@ void ~\newline
  
 \end{DoxyReturn}
 \begin{DoxyRemark}{Remarks}
-<<<<<<< HEAD
-ng doit être inferieur à 255 (d\textquotesingle{}où le usigned char) 
-=======
 ng doit être inférieur ou égal à 255 (usigned char) 
->>>>>>> e44488f388dedb849cdf1d1d2a2853e3c58e781f
 \end{DoxyRemark}
 
 
