@@ -72,7 +72,7 @@ class Image {
         *   @param[in,out] couleur un pixel de la couleur du rectangle désiré (attention : en mode donnée/résultat mais CONST)
         *   @return void 
         */
-    void dessinerRectangle (unsigned int Xmin, unsigned int Ymin, unsigned int Xmax, unsigned int Ymax, const Pixel& couleur );
+        void dessinerRectangle (unsigned int Xmin, unsigned int Ymin, unsigned int Xmax, unsigned int Ymax, const Pixel& couleur );
 
         
         /**
@@ -80,14 +80,14 @@ class Image {
         *   @param[in,out] couleur un pixel de la couleur désirée (attention : en mode donnée/résultat mais CONST) 
         *   @return void 
         */
-    void effacer (const Pixel& couleur);
+        void effacer (const Pixel& couleur);
 
         
         /**
         *   @brief  Effectue une série de tests vérifiant que le module fonctionne et que les données membres de l'objet sont conformes
         *   @return void 
         */
-   void testRegression ();
+        void testRegression ();
 
         
         /**
@@ -95,7 +95,7 @@ class Image {
         *   @param[in,out] filename nom de l'image à sauvegarder (attention : en mode donnée/résultat mais CONST)
         *   @return void 
         */
-   void sauver(const string& filename) const;
+        void sauver(const string& filename) const;
 
 
         /**
@@ -103,21 +103,21 @@ class Image {
         *   @param[in,out] filename chemin/nom de l'image à ouvrir (attention : en mode donnée/résultat mais CONST)
         *   @return void 
         */
-   void ouvrir(const string& filename);
+        void ouvrir(const string& filename);
 
 
         /**
         *   @brief Afficher les composantes RGB des pixels sur la console
         *   @return void 
         */
-   void afficherConsole();
+        void afficherConsole();
 
 
         /**
         *   @brief Affiche l'image dans une fenêtre SDL2
         *   @return void 
         */
-    void afficher() const;
+        void afficher() const;
 
 };
 
