@@ -1,4 +1,4 @@
-#ifndef IMAGE_H
+s#ifndef IMAGE_H
 #define IMAGE_H
 
 #include "Pixel.h"

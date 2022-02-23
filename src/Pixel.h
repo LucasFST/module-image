@@ -30,21 +30,21 @@ class Pixel
 
     /**
      * @brief   Accesseur : récupère la composante rouge du pixel
-     * @return unsigned int (entier compris entre 0 et 255)     
+     * @return unsigned char (entier compris entre 0 et 255)     
     */
 
    unsigned int getRouge () const;
 
     /**
      * @brief   Accesseur : récupère la composante vert du pixel
-     * @return unsigned int (entier compris entre 0 et 255)       
+     * @return unsigned char (entier compris entre 0 et 255)       
     */
 
    unsigned int getVert () const;
 
     /**
      * @brief   Accesseur : récupère la composante bleu du pixel
-     * @return unsigned int (entier compris entre 0 et 255)       
+     * @return unsigned char (entier compris entre 0 et 255)       
     */
 
    unsigned int getBleu () const;

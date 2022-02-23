@@ -8,12 +8,12 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_image_a58edd1c45b4faeb5f789b0d036d02313}\label{class_image_a58edd1c45b4faeb5f789b0d036d02313}} 
-{\bfseries Image} ()
+\mbox{\hyperlink{class_image_a58edd1c45b4faeb5f789b0d036d02313}{Image}} ()
 \begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \+: initialise dimx et dimy à 0, ce constructeur n\textquotesingle{}alloue pas de pixel. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_image_a3ee63d37f01ef80f9d8ed5bf8e6fe10d}{Image}} (unsigned int dimx, unsigned int dimy)
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe \+: initialise dimx et dimy (après vérification), puis alloue le tableau de pixel dans le tas (image noire) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_image_a0294f63700543e11c0f0da85601c7ae5}\label{class_image_a0294f63700543e11c0f0da85601c7ae5}} 
-{\bfseries $\sim$\+Image} ()
+\mbox{\hyperlink{class_image_a0294f63700543e11c0f0da85601c7ae5}{$\sim$\+Image}} ()
 \begin{DoxyCompactList}\small\item\em Destructeur de la classe \+: désallocation de la mémoire du tableau de pixel et mise à jour des champs dimx et dimy à 0. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_pixel}{Pixel}} \mbox{\hyperlink{class_image_aa2c1f02bdf9178459b5bb7409ab86648}{get\+Pix}} (unsigned int x, unsigned int y) const
 \begin{DoxyCompactList}\small\item\em Accesseur \+: récupère le pixel original de coordonnées (x,y) en vérifiant leur validité \end{DoxyCompactList}\item 
@@ -30,7 +30,9 @@ void \mbox{\hyperlink{class_image_af870cb0c00a370927e6957f99a409586}{sauver}} (c
 void \mbox{\hyperlink{class_image_a504778b71d66c4da931cad497e2ec249}{ouvrir}} (const string \&filename)
 \begin{DoxyCompactList}\small\item\em Ouvrir une image depuis un fichier. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_image_aa3cc6f7401625c11dcd5ef003f37e4fa}{afficher\+Console}} ()
-\begin{DoxyCompactList}\small\item\em Afficher les composantes RGB des pixels sur la console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Afficher les composantes R\+GB des pixels sur la console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a5054efd59e01ba1de7ebd88bdc46a65f}{afficher}} () const
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}image dans une fenêtre S\+D\+L2. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -63,6 +65,19 @@ dimx et dimy ne peuvent être supérieurs ou égaux à 50000 (limite arbitraire)
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_a5054efd59e01ba1de7ebd88bdc46a65f}\label{class_image_a5054efd59e01ba1de7ebd88bdc46a65f}} 
+\index{Image@{Image}!afficher@{afficher}}
+\index{afficher@{afficher}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{afficher()}{afficher()}}
+{\footnotesize\ttfamily void Image\+::afficher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Affiche l\textquotesingle{}image dans une fenêtre S\+D\+L2. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_image_aa3cc6f7401625c11dcd5ef003f37e4fa}\label{class_image_aa3cc6f7401625c11dcd5ef003f37e4fa}} 
 \index{Image@{Image}!afficherConsole@{afficherConsole}}
 \index{afficherConsole@{afficherConsole}!Image@{Image}}
@@ -71,7 +86,7 @@ dimx et dimy ne peuvent être supérieurs ou égaux à 50000 (limite arbitraire)
 
 
 
-Afficher les composantes RGB des pixels sur la console. 
+Afficher les composantes R\+GB des pixels sur la console. 
 
 \begin{DoxyReturn}{Returns}
 void 
@@ -97,7 +112,7 @@ Dessine un rectangle plein de la couleur désirée dans l\textquotesingle{}image
 \hline
 \mbox{\texttt{ in}}  & {\em Ymax} & la composante x du coin bas droite \\
 \hline
-\mbox{\texttt{ in,out}}  & {\em couleur} & un pixel de la couleur du rectangle désiré (attention \+: en mode donnée/résultat mais CONST) \\
+\mbox{\texttt{ in,out}}  & {\em couleur} & un pixel de la couleur du rectangle désiré (attention \+: en mode donnée/résultat mais C\+O\+N\+ST) \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -115,7 +130,7 @@ Efface l\textquotesingle{}image en la remplissant de la couleur passée en param
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in,out}}  & {\em couleur} & un pixel de la couleur désirée (attention \+: en mode donnée/résultat mais CONST) \\
+\mbox{\texttt{ in,out}}  & {\em couleur} & un pixel de la couleur désirée (attention \+: en mode donnée/résultat mais C\+O\+N\+ST) \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -156,7 +171,7 @@ Ouvrir une image depuis un fichier.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in,out}}  & {\em filename} & chemin/nom de l\textquotesingle{}image à ouvrir (attention \+: en mode donnée/résultat mais CONST) \\
+\mbox{\texttt{ in,out}}  & {\em filename} & chemin/nom de l\textquotesingle{}image à ouvrir (attention \+: en mode donnée/résultat mais C\+O\+N\+ST) \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -174,7 +189,7 @@ Sauver une image dans un fichier.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in,out}}  & {\em filename} & nom de l\textquotesingle{}image à sauvegarder (attention \+: en mode donnée/résultat mais CONST) \\
+\mbox{\texttt{ in,out}}  & {\em filename} & nom de l\textquotesingle{}image à sauvegarder (attention \+: en mode donnée/résultat mais C\+O\+N\+ST) \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -196,7 +211,7 @@ Mutateur \+: modifie la couleur du pixel de coordonnées (x,y) en vérifiant leu
 \hline
 \mbox{\texttt{ in}}  & {\em y} & la coordonnée y du pixel \\
 \hline
-\mbox{\texttt{ in,out}}  & {\em couleur} & un pixel de la nouvelle couleur désirée (attention \+: en mode donnée/résultat mais CONST) \\
+\mbox{\texttt{ in,out}}  & {\em couleur} & un pixel de la nouvelle couleur désirée (attention \+: en mode donnée/résultat mais C\+O\+N\+ST) \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
