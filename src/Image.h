@@ -113,6 +113,12 @@ class Image {
    void afficherConsole();
 
 
+        /**
+        *   @brief Affiche l'image dans une fenêtre SDL2
+        *   @return void 
+        */
+    void afficher() const;
+
 };
 
 #endif
