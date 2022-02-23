@@ -6,7 +6,7 @@
 using namespace std;
 
 /**
-*   @author {Faustmann Lucas; Brossat Pierrick}
+*   @author {Brossat Pierrick ; Faustmann Lucas}
 */
 class Pixel
 {
@@ -51,6 +51,7 @@ class Pixel
 
     /**
      * @brief  Mutateur : modifie la composante rouge du pixel
+     * @param[in] nr un entier strictement positif représentant le pixel rouge
      * @return void     
      * @remark nr doit être inferieur à 255 (d'où le usigned char)
     */
@@ -59,6 +60,7 @@ class Pixel
 
     /**
      * @brief  Mutateur : modifie la composante vert du pixel
+     * @param[in] ng un entier strictement positif représentant le pixel vert 
      * @return void   
     * @remark ng doit être inferieur à 255 (d'où le usigned char)
     */
@@ -67,6 +69,7 @@ class Pixel
 
     /**
      * @brief  Mutateur : modifie la composante bleu du pixel
+     * @param[in] nb un entier strictement positif représentant le pixel bleu
      * @return void     
      * @remark nb doit être inferieur à 255 (d'où le usigned char)
     */   
@@ -75,7 +78,7 @@ class Pixel
 
    private :
 
-    unsigned int r,g,b;    // les composantes du pixel, unsigned char en C++
+    unsigned int r,g,b;    // les composantes du pixel
 };
 
 #endif

@@ -8,7 +8,7 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_pixel_a27ad99a2f705e635c42d242d530d4756}\label{class_pixel_a27ad99a2f705e635c42d242d530d4756}} 
-\mbox{\hyperlink{class_pixel_a27ad99a2f705e635c42d242d530d4756}{Pixel}} ()
+{\bfseries Pixel} ()
 \begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \+: initialise le pixel à la couleur noire. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_pixel_a5c930d187b7d6412870150884e553421}{Pixel}} (unsigned int nr, unsigned int ng, unsigned int nb)
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe \+: initialise r,g,b avec les paramètres. \end{DoxyCompactList}\item 
@@ -28,7 +28,7 @@ void \mbox{\hyperlink{class_pixel_aa4277112ad13b6c3124f13d0c8769165}{set\+Bleu}}
 
 \doxysubsection{Detailed Description}
 \begin{DoxyAuthor}{Author}
-\{Faustmann Lucas; Brossat Pierrick\} 
+\{Brossat Pierrick ; Faustmann Lucas\} 
 \end{DoxyAuthor}
 
 
@@ -45,15 +45,15 @@ Constructeur de la classe \+: initialise r,g,b avec les paramètres.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em nr} & un entier strictement positif $<$=255 représentant le pixel rouge \\
+\mbox{\texttt{ in}}  & {\em nr} & un entier strictement positif représentant le pixel rouge \\
 \hline
-\mbox{\texttt{ in}}  & {\em nv} & un entier strictement positif $<$=255 représentant le pixel vert \\
+\mbox{\texttt{ in}}  & {\em ng} & un entier strictement positif représentant le pixel vert \\
 \hline
-\mbox{\texttt{ in}}  & {\em nb} & un entier strictement positif $<$=255 représentant le pixel bleu \\
+\mbox{\texttt{ in}}  & {\em nb} & un entier strictement positif représentant le pixel bleu \\
 \hline
 \end{DoxyParams}
 \begin{DoxyRemark}{Remarks}
-nr, ng et nb doivent être inferieur à 255 
+nr, ng et nb doivent être inférieurs ou égaux à 255 
 \end{DoxyRemark}
 
 
@@ -110,12 +110,17 @@ unsigned int (entier compris entre 0 et 255) ~\newline
 
 Mutateur \+: modifie la composante bleu du pixel. 
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nb} & un entier strictement positif représentant le pixel bleu \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 void ~\newline
  
 \end{DoxyReturn}
 \begin{DoxyRemark}{Remarks}
-nb doit être inferieur à 255 
+nb doit être inférieur ou égal à 255 
 \end{DoxyRemark}
 \mbox{\Hypertarget{class_pixel_a2a1aed9785799a3f75de911438d0ceda}\label{class_pixel_a2a1aed9785799a3f75de911438d0ceda}} 
 \index{Pixel@{Pixel}!setRouge@{setRouge}}
@@ -127,12 +132,17 @@ nb doit être inferieur à 255
 
 Mutateur \+: modifie la composante rouge du pixel. 
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nr} & un entier strictement positif représentant le pixel rouge \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 void ~\newline
  
 \end{DoxyReturn}
 \begin{DoxyRemark}{Remarks}
-nr doit être inferieur à 255 
+nr doit être inférieur ou égal à 255 
 \end{DoxyRemark}
 \mbox{\Hypertarget{class_pixel_a78bb8e33939c3e6fa13418ddcd8427df}\label{class_pixel_a78bb8e33939c3e6fa13418ddcd8427df}} 
 \index{Pixel@{Pixel}!setVert@{setVert}}
@@ -144,12 +154,17 @@ nr doit être inferieur à 255
 
 Mutateur \+: modifie la composante vert du pixel. 
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ng} & un entier strictement positif représentant le pixel vert \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 void ~\newline
  
 \end{DoxyReturn}
 \begin{DoxyRemark}{Remarks}
-ng doit être inferieur à 255 
+ng doit être inférieur ou égal à 255 
 \end{DoxyRemark}
 
 

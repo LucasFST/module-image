@@ -25,58 +25,57 @@ Image::Image(unsigned int dimX, unsigned int dimY)
 
 //destructeur par defaut
 Image::~Image()
+{
+    if(tab != NULL) 
     {
-        if(tab != NULL) 
-        {
-            delete[] tab;
-        }
-        tab=NULL;
-        dimx=0;
-        dimy=0;
+       delete[] tab;
     }
+    tab=NULL;
+    dimx=0;
+     dimy=0;
+}
 
 
 
 Pixel Image::getPix (unsigned int x,unsigned int y) const
-    {
-        assert (x<dimx && y<dimy ); //x et y doivent être respectivement plus petit que dimx et dimy
-        return tab[y*dimx+x];  //formule pour passer d'un tab 2D à un tab 1D
-
-    }
+{
+    assert (x<dimx && y<dimy ); //x et y doivent être respectivement plus petit que dimx et dimy
+    return tab[y*dimx+x];  //formule pour passer d'un tab 2D à un tab 1D
+}
 
 
 
 void Image::setPix (unsigned int x,unsigned int y, const Pixel& couleur)
-    {
-        assert (x<dimx && y<dimy ); //x et y doivent être respectivement plus petit que dimx et dimy
+{
+    assert (x<dimx && y<dimy ); //x et y doivent être respectivement plus petit que dimx et dimy
         
-        tab [y*dimx+x].setRouge(couleur.getRouge());  //on attribue un couleur bien spécifique a notre pixel (R G B)
-        tab [y*dimx+x].setVert(couleur.getVert());
-        tab [y*dimx+x].setBleu(couleur.getBleu());
-    }
+    tab [y*dimx+x].setRouge(couleur.getRouge());  //on attribue un couleur bien spécifique a notre pixel (R G B)
+    tab [y*dimx+x].setVert(couleur.getVert());
+    tab [y*dimx+x].setBleu(couleur.getBleu());
+}
 
 
 
 
 void Image::dessinerRectangle (unsigned int Xmin,unsigned int Ymin,unsigned int Xmax,unsigned int Ymax, const Pixel& couleur)
-     {
-        for (unsigned int i=Ymin; i<=Ymax; i++) 
-            {
-            for (unsigned int j=Xmin; j<=Xmax; j++ )
-                {
-                   setPix(j,i,couleur); //on change la couleur des pixels qui seront dans le rectangle 
-                }
+{
+    for (unsigned int i=Ymin; i<=Ymax; i++) 
+    {
+        for (unsigned int j=Xmin; j<=Xmax; j++ )
+        {
+            setPix(j,i,couleur); //on change la couleur des pixels qui seront dans le rectangle 
+        }
 
-            }
-     }
+    }
+}
 
 
 
 
 void Image::effacer (const Pixel& couleur)
-    {
-        dessinerRectangle (0,0,dimx-1,dimy-1,couleur); // on recouvre toute l'image par la couleur en parametre grâce a dessinerRectange 
-    }
+{
+    dessinerRectangle (0,0,dimx-1,dimy-1,couleur); // on recouvre toute l'image par la couleur en parametre grâce a dessinerRectange 
+}
 
 void Image::testRegression ()
 {
@@ -116,58 +115,62 @@ void Image::testRegression ()
 }
 
 
-void Image::sauver(const string & filename) const {
+void Image::sauver(const string & filename) const 
+{
     ofstream fichier (filename.c_str());
     assert(fichier.is_open());
-    //fichier << "P3" << endl;  
     fichier << dimx << " " << dimy << endl;
-    //fichier << "255" << endl; 
-    for(unsigned int y=0; y<dimy; y++) //y++
-        //{
-        for(unsigned int x=0; x<dimx; x++) //x++
-         {
-            Pixel pix = getPix(x,y); //Pixel& to Pixel
-            fichier << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " "; //accesseurs
+    for(unsigned int y=0; y<dimy; y++) 
+        for(unsigned int x=0; x<dimx; x++) 
+        {
+            Pixel pix = getPix(x,y); 
+            fichier << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " "; 
         }
-        //}
     cout << "Sauvegarde de l'image " << filename << " ... OK\n";
     fichier.close();
 }
 
-void Image::ouvrir(const string & filename) {
+void Image::ouvrir(const string & filename) 
+{
     ifstream fichier (filename.c_str());
     assert(fichier.is_open());
-    string r,g,b; //char to string
+    string r,g,b; 
     string mot;
-    dimx = dimy = 0; //séparer les =
-    fichier /*>> mot*/ >> dimx >> dimy /*>> mot*/; //mot servait à enlever P3 et 255
+    dimx = dimy = 0; 
+    fichier >> dimx >> dimy; 
     assert(dimx > 0 && dimy > 0);
     if (tab != NULL) delete [] tab;
     tab = new Pixel [dimx*dimy];
-    for(unsigned int y=0; y<dimy; y++) //y++
-        //{
-        for(unsigned int x=0; x<dimx; x++) //x++
+    for(unsigned int y=0; y<dimy; y++) 
+        for(unsigned int x=0; x<dimx; x++) 
         {
-            fichier >> r >> g >> b;  //inverser b et g
+            fichier >> r >> g >> b;  
             Pixel couleur(stoi(r),stoi(g), stoi(b)); //stoi() string to int (unsigned int ça serait mieux)
-            setPix(x,y,couleur);   //getPix to setPix
+            setPix(x,y,couleur);   
             setPix(x,y,couleur);
             setPix(x,y,couleur);
         }
-        //}
     fichier.close();
     cout << "Lecture de l'image " << filename << " ... OK\n";
 }
 
-void Image::afficherConsole(){
+void Image::afficherConsole()
+{
     cout << dimx << " " << dimy << endl;
-    for(unsigned int y=0; y<dimy; y++) //y++
+    for(unsigned int y=0; y<dimy; y++) 
     {
-        for(unsigned int x=0; x<dimx; x++) //x++ 
+        for(unsigned int x=0; x<dimx; x++) 
         {
-            Pixel pix = getPix(x,y); //Pixel& to Pixel
+            Pixel pix = getPix(x,y); 
             cout << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
         cout << endl;
     }
 }
+
+void Image::afficher() const
+{
+    
+}
+
+
