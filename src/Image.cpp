@@ -9,6 +9,7 @@ using namespace std;
 Image::Image()
 {
     dimx=0;
+    dimy=0;
     tab = NULL;
 }
 
