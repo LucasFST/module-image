@@ -30,7 +30,9 @@ void \mbox{\hyperlink{class_image_af870cb0c00a370927e6957f99a409586}{sauver}} (c
 void \mbox{\hyperlink{class_image_a504778b71d66c4da931cad497e2ec249}{ouvrir}} (const string \&filename)
 \begin{DoxyCompactList}\small\item\em Ouvrir une image depuis un fichier. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_image_aa3cc6f7401625c11dcd5ef003f37e4fa}{afficher\+Console}} ()
-\begin{DoxyCompactList}\small\item\em Afficher les composantes RGB des pixels sur la console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Afficher les composantes RGB des pixels sur la console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a5054efd59e01ba1de7ebd88bdc46a65f}{afficher}} () const
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}image dans une fenêtre SDL2. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -63,6 +65,19 @@ dimx et dimy ne peuvent être supérieurs ou égaux à 50000 (limite arbitraire)
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_a5054efd59e01ba1de7ebd88bdc46a65f}\label{class_image_a5054efd59e01ba1de7ebd88bdc46a65f}} 
+\index{Image@{Image}!afficher@{afficher}}
+\index{afficher@{afficher}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{afficher()}{afficher()}}
+{\footnotesize\ttfamily void Image\+::afficher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Affiche l\textquotesingle{}image dans une fenêtre SDL2. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_image_aa3cc6f7401625c11dcd5ef003f37e4fa}\label{class_image_aa3cc6f7401625c11dcd5ef003f37e4fa}} 
 \index{Image@{Image}!afficherConsole@{afficherConsole}}
 \index{afficherConsole@{afficherConsole}!Image@{Image}}

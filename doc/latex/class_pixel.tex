@@ -10,20 +10,20 @@
 \mbox{\Hypertarget{class_pixel_a27ad99a2f705e635c42d242d530d4756}\label{class_pixel_a27ad99a2f705e635c42d242d530d4756}} 
 {\bfseries Pixel} ()
 \begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \+: initialise le pixel à la couleur noire. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_pixel_a5c930d187b7d6412870150884e553421}{Pixel}} (unsigned int nr, unsigned int ng, unsigned int nb)
+\mbox{\hyperlink{class_pixel_ae14440155731c2f7e2073b7bbbd596f3}{Pixel}} (unsigned char nr, unsigned char ng, unsigned char nb)
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe \+: initialise r,g,b avec les paramètres. \end{DoxyCompactList}\item 
-unsigned int \mbox{\hyperlink{class_pixel_a770fe319ef462a48b83eeed28224e16e}{get\+Rouge}} () const
+unsigned char \mbox{\hyperlink{class_pixel_ab0ec14a265184c9452407394a29b65d2}{get\+Rouge}} () const
 \begin{DoxyCompactList}\small\item\em Accesseur \+: récupère la composante rouge du pixel. \end{DoxyCompactList}\item 
-unsigned int \mbox{\hyperlink{class_pixel_a431fb781cc2cb35db18c3f07cc619afc}{get\+Vert}} () const
-\begin{DoxyCompactList}\small\item\em Accesseur \+: récupère la composante vert du pixel. \end{DoxyCompactList}\item 
-unsigned int \mbox{\hyperlink{class_pixel_a03f07bd8c0bd8afa5732b0a468cc5724}{get\+Bleu}} () const
-\begin{DoxyCompactList}\small\item\em Accesseur \+: récupère la composante bleu du pixel. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pixel_a2a1aed9785799a3f75de911438d0ceda}{set\+Rouge}} (unsigned int nr)
+unsigned char \mbox{\hyperlink{class_pixel_a35afebd6965ea07c3d3c9a4c46176676}{get\+Vert}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur \+: récupère la composante verte du pixel. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{class_pixel_aa3e3cf7f2ca814ae2cfeb84cd48f3268}{get\+Bleu}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur \+: récupère la composante bleue du pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_a46ffac40207a65c1481afcb2b156e433}{set\+Rouge}} (unsigned char nr)
 \begin{DoxyCompactList}\small\item\em Mutateur \+: modifie la composante rouge du pixel. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pixel_a78bb8e33939c3e6fa13418ddcd8427df}{set\+Vert}} (unsigned int ng)
-\begin{DoxyCompactList}\small\item\em Mutateur \+: modifie la composante vert du pixel. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pixel_aa4277112ad13b6c3124f13d0c8769165}{set\+Bleu}} (unsigned int nb)
-\begin{DoxyCompactList}\small\item\em Mutateur \+: modifie la composante bleu du pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_pixel_a9c0b314120976395eaec55e6d07256ca}{set\+Vert}} (unsigned char ng)
+\begin{DoxyCompactList}\small\item\em Mutateur \+: modifie la composante verte du pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_a706ee4cd16d1098fab21c727c90cb00b}{set\+Bleu}} (unsigned char nb)
+\begin{DoxyCompactList}\small\item\em Mutateur \+: modifie la composante bleue du pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -33,11 +33,11 @@ void \mbox{\hyperlink{class_pixel_aa4277112ad13b6c3124f13d0c8769165}{set\+Bleu}}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_pixel_a5c930d187b7d6412870150884e553421}\label{class_pixel_a5c930d187b7d6412870150884e553421}} 
+\mbox{\Hypertarget{class_pixel_ae14440155731c2f7e2073b7bbbd596f3}\label{class_pixel_ae14440155731c2f7e2073b7bbbd596f3}} 
 \index{Pixel@{Pixel}!Pixel@{Pixel}}
 \index{Pixel@{Pixel}!Pixel@{Pixel}}
 \doxysubsubsection{\texorpdfstring{Pixel()}{Pixel()}}
-{\footnotesize\ttfamily Pixel\+::\+Pixel (\begin{DoxyParamCaption}\item[{unsigned int}]{nr,  }\item[{unsigned int}]{ng,  }\item[{unsigned int}]{nb }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Pixel\+::\+Pixel (\begin{DoxyParamCaption}\item[{unsigned char}]{nr,  }\item[{unsigned char}]{ng,  }\item[{unsigned char}]{nb }\end{DoxyParamCaption})}
 
 
 
@@ -45,74 +45,74 @@ Constructeur de la classe \+: initialise r,g,b avec les paramètres.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em nr} & un entier strictement positif représentant le pixel rouge \\
+\mbox{\texttt{ in}}  & {\em nr} & un entier strictement positif représentant la composante rouge du pixel \\
 \hline
-\mbox{\texttt{ in}}  & {\em ng} & un entier strictement positif représentant le pixel vert \\
+\mbox{\texttt{ in}}  & {\em ng} & un entier strictement positif représentant la composante verte du pixel \\
 \hline
-\mbox{\texttt{ in}}  & {\em nb} & un entier strictement positif représentant le pixel bleu \\
+\mbox{\texttt{ in}}  & {\em nb} & un entier strictement positif représentant la composante bleue du pixel \\
 \hline
 \end{DoxyParams}
 \begin{DoxyRemark}{Remarks}
-nr, ng et nb doivent être inférieurs ou égaux à 255 
+nr, ng et nb doivent être inférieurs ou égaux à 255 (unsigned char) 
 \end{DoxyRemark}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_pixel_a03f07bd8c0bd8afa5732b0a468cc5724}\label{class_pixel_a03f07bd8c0bd8afa5732b0a468cc5724}} 
+\mbox{\Hypertarget{class_pixel_aa3e3cf7f2ca814ae2cfeb84cd48f3268}\label{class_pixel_aa3e3cf7f2ca814ae2cfeb84cd48f3268}} 
 \index{Pixel@{Pixel}!getBleu@{getBleu}}
 \index{getBleu@{getBleu}!Pixel@{Pixel}}
 \doxysubsubsection{\texorpdfstring{getBleu()}{getBleu()}}
-{\footnotesize\ttfamily unsigned int Pixel\+::get\+Bleu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily unsigned char Pixel\+::get\+Bleu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Accesseur \+: récupère la composante bleu du pixel. 
+Accesseur \+: récupère la composante bleue du pixel. 
 
 \begin{DoxyReturn}{Returns}
-unsigned int (entier compris entre 0 et 255) ~\newline
+unsigned char (entier compris entre 0 et 255) ~\newline
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_pixel_a770fe319ef462a48b83eeed28224e16e}\label{class_pixel_a770fe319ef462a48b83eeed28224e16e}} 
+\mbox{\Hypertarget{class_pixel_ab0ec14a265184c9452407394a29b65d2}\label{class_pixel_ab0ec14a265184c9452407394a29b65d2}} 
 \index{Pixel@{Pixel}!getRouge@{getRouge}}
 \index{getRouge@{getRouge}!Pixel@{Pixel}}
 \doxysubsubsection{\texorpdfstring{getRouge()}{getRouge()}}
-{\footnotesize\ttfamily unsigned int Pixel\+::get\+Rouge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily unsigned char Pixel\+::get\+Rouge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
 Accesseur \+: récupère la composante rouge du pixel. 
 
 \begin{DoxyReturn}{Returns}
-unsigned int (entier compris entre 0 et 255) ~\newline
+unsigned char (entier compris entre 0 et 255) ~\newline
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_pixel_a431fb781cc2cb35db18c3f07cc619afc}\label{class_pixel_a431fb781cc2cb35db18c3f07cc619afc}} 
+\mbox{\Hypertarget{class_pixel_a35afebd6965ea07c3d3c9a4c46176676}\label{class_pixel_a35afebd6965ea07c3d3c9a4c46176676}} 
 \index{Pixel@{Pixel}!getVert@{getVert}}
 \index{getVert@{getVert}!Pixel@{Pixel}}
 \doxysubsubsection{\texorpdfstring{getVert()}{getVert()}}
-{\footnotesize\ttfamily unsigned int Pixel\+::get\+Vert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily unsigned char Pixel\+::get\+Vert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Accesseur \+: récupère la composante vert du pixel. 
+Accesseur \+: récupère la composante verte du pixel. 
 
 \begin{DoxyReturn}{Returns}
-unsigned int (entier compris entre 0 et 255) ~\newline
+unsigned char (entier compris entre 0 et 255) ~\newline
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_pixel_aa4277112ad13b6c3124f13d0c8769165}\label{class_pixel_aa4277112ad13b6c3124f13d0c8769165}} 
+\mbox{\Hypertarget{class_pixel_a706ee4cd16d1098fab21c727c90cb00b}\label{class_pixel_a706ee4cd16d1098fab21c727c90cb00b}} 
 \index{Pixel@{Pixel}!setBleu@{setBleu}}
 \index{setBleu@{setBleu}!Pixel@{Pixel}}
 \doxysubsubsection{\texorpdfstring{setBleu()}{setBleu()}}
-{\footnotesize\ttfamily void Pixel\+::set\+Bleu (\begin{DoxyParamCaption}\item[{unsigned int}]{nb }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Pixel\+::set\+Bleu (\begin{DoxyParamCaption}\item[{unsigned char}]{nb }\end{DoxyParamCaption})}
 
 
 
-Mutateur \+: modifie la composante bleu du pixel. 
+Mutateur \+: modifie la composante bleue du pixel. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em nb} & un entier strictement positif représentant le pixel bleu \\
+\mbox{\texttt{ in}}  & {\em nb} & un entier strictement positif représentant la composante bleue du pixel \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -120,13 +120,13 @@ void ~\newline
  
 \end{DoxyReturn}
 \begin{DoxyRemark}{Remarks}
-nb doit être inférieur ou égal à 255 
+nb doit être inférieur ou égal à 255 (usigned char) 
 \end{DoxyRemark}
-\mbox{\Hypertarget{class_pixel_a2a1aed9785799a3f75de911438d0ceda}\label{class_pixel_a2a1aed9785799a3f75de911438d0ceda}} 
+\mbox{\Hypertarget{class_pixel_a46ffac40207a65c1481afcb2b156e433}\label{class_pixel_a46ffac40207a65c1481afcb2b156e433}} 
 \index{Pixel@{Pixel}!setRouge@{setRouge}}
 \index{setRouge@{setRouge}!Pixel@{Pixel}}
 \doxysubsubsection{\texorpdfstring{setRouge()}{setRouge()}}
-{\footnotesize\ttfamily void Pixel\+::set\+Rouge (\begin{DoxyParamCaption}\item[{unsigned int}]{nr }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Pixel\+::set\+Rouge (\begin{DoxyParamCaption}\item[{unsigned char}]{nr }\end{DoxyParamCaption})}
 
 
 
@@ -134,7 +134,7 @@ Mutateur \+: modifie la composante rouge du pixel.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em nr} & un entier strictement positif représentant le pixel rouge \\
+\mbox{\texttt{ in}}  & {\em nr} & un entier strictement positif représentant la composante rouge du pixel \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -142,21 +142,21 @@ void ~\newline
  
 \end{DoxyReturn}
 \begin{DoxyRemark}{Remarks}
-nr doit être inférieur ou égal à 255 
+nr doit être inférieur ou égal à 255 (unsigned char) 
 \end{DoxyRemark}
-\mbox{\Hypertarget{class_pixel_a78bb8e33939c3e6fa13418ddcd8427df}\label{class_pixel_a78bb8e33939c3e6fa13418ddcd8427df}} 
+\mbox{\Hypertarget{class_pixel_a9c0b314120976395eaec55e6d07256ca}\label{class_pixel_a9c0b314120976395eaec55e6d07256ca}} 
 \index{Pixel@{Pixel}!setVert@{setVert}}
 \index{setVert@{setVert}!Pixel@{Pixel}}
 \doxysubsubsection{\texorpdfstring{setVert()}{setVert()}}
-{\footnotesize\ttfamily void Pixel\+::set\+Vert (\begin{DoxyParamCaption}\item[{unsigned int}]{ng }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Pixel\+::set\+Vert (\begin{DoxyParamCaption}\item[{unsigned char}]{ng }\end{DoxyParamCaption})}
 
 
 
-Mutateur \+: modifie la composante vert du pixel. 
+Mutateur \+: modifie la composante verte du pixel. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em ng} & un entier strictement positif représentant le pixel vert \\
+\mbox{\texttt{ in}}  & {\em ng} & un entier strictement positif représentant la composante verte du pixel \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -164,7 +164,7 @@ void ~\newline
  
 \end{DoxyReturn}
 \begin{DoxyRemark}{Remarks}
-ng doit être inférieur ou égal à 255 
+ng doit être inférieur ou égal à 255 (usigned char) 
 \end{DoxyRemark}
 
 

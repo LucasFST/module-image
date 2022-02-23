@@ -3,7 +3,7 @@
 #include <cassert>
 
 
-//constructeur par defaut (couleur noir)
+//constructeur par défaut (couleur noir)
 Pixel::Pixel()
 {
 	r = 0;
@@ -12,7 +12,7 @@ Pixel::Pixel()
 }
 
 
-//constructeur avec des parametres rentrés par l'uti
+//constructeur avec des paramètres rentrés par l'uti
 Pixel::Pixel (unsigned char nr, unsigned char ng, unsigned char nb)
 {
 	r = nr;	//on applique les modifs
@@ -20,37 +20,37 @@ Pixel::Pixel (unsigned char nr, unsigned char ng, unsigned char nb)
 	b = nb;
 }
 
-//retourne la valeur R du code RGB
-unsigned int Pixel::getRouge () const 
+//retourne la composante rouge du pixel 
+unsigned char Pixel::getRouge () const 
 {
 	return r;
 }
 
-//retourne la valeur G du code RGB
-unsigned int Pixel::getVert () const
+//retourne la composante verte du pixel 
+unsigned char Pixel::getVert () const
 {
 	return g;
 }
 
-//retourne la valeur B du code RGB
-unsigned int Pixel::getBleu () const
+//retourne la composante bleue du pixel 
+unsigned char Pixel::getBleu () const
 {
 	return b;
 }
 
-//change la couleur R du code RGB du pixel
+//change la composante rouge du pixel 
 void Pixel::setRouge (unsigned char nr)
 {
 	r = nr; // on applique le changement
 }
 
-//change la couleur G du code RGB du pixel
+//change la composante verte du pixel 
 void Pixel::setVert (unsigned char ng)
 {
 	g = ng;	// on applique le changement
 }
 
-//change la couleur G du code RGB du pixel
+//change la composante bleue du pixel 
 void Pixel::setBleu (unsigned char nb)
 {
 	b = nb; // on applique le changement

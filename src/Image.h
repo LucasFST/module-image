@@ -48,7 +48,7 @@ class Image {
         *   @return Pixel 
         *   @remark x et y doivent être inférieurs strictement à dimx et dimy respectivement (dimensions de l'image) 
         */
-        Pixel getPix (unsigned int x, unsigned int y) const;
+        Pixel getPix (unsigned int x, unsigned int y) const; //retourne Pixel ou Pixel&
 
 
       
