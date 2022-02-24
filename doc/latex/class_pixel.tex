@@ -7,11 +7,10 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_pixel_a27ad99a2f705e635c42d242d530d4756}\label{class_pixel_a27ad99a2f705e635c42d242d530d4756}} 
-{\bfseries Pixel} ()
+\mbox{\hyperlink{class_pixel_a27ad99a2f705e635c42d242d530d4756}{Pixel}} ()
 \begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \+: initialise le pixel à la couleur noire. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_pixel_ae14440155731c2f7e2073b7bbbd596f3}{Pixel}} (unsigned char nr, unsigned char ng, unsigned char nb)
-\begin{DoxyCompactList}\small\item\em Constructeur de la classe \+: initialise r,g,b avec les paramètres. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \+: initialise r,g,b avec respectivement les paramètres nr,ng,nb. \end{DoxyCompactList}\item 
 unsigned char \mbox{\hyperlink{class_pixel_ab0ec14a265184c9452407394a29b65d2}{get\+Rouge}} () const
 \begin{DoxyCompactList}\small\item\em Accesseur \+: récupère la composante rouge du pixel. \end{DoxyCompactList}\item 
 unsigned char \mbox{\hyperlink{class_pixel_a35afebd6965ea07c3d3c9a4c46176676}{get\+Vert}} () const
@@ -33,15 +32,30 @@ void \mbox{\hyperlink{class_pixel_a706ee4cd16d1098fab21c727c90cb00b}{set\+Bleu}}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_pixel_ae14440155731c2f7e2073b7bbbd596f3}\label{class_pixel_ae14440155731c2f7e2073b7bbbd596f3}} 
+\mbox{\Hypertarget{class_pixel_a27ad99a2f705e635c42d242d530d4756}\label{class_pixel_a27ad99a2f705e635c42d242d530d4756}} 
 \index{Pixel@{Pixel}!Pixel@{Pixel}}
 \index{Pixel@{Pixel}!Pixel@{Pixel}}
-\doxysubsubsection{\texorpdfstring{Pixel()}{Pixel()}}
+\doxysubsubsection{\texorpdfstring{Pixel()}{Pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pixel\+::\+Pixel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut de la classe \+: initialise le pixel à la couleur noire. 
+
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_pixel}{Pixel}} un\_Pixel;}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_pixel_ae14440155731c2f7e2073b7bbbd596f3}\label{class_pixel_ae14440155731c2f7e2073b7bbbd596f3}} 
+\index{Pixel@{Pixel}!Pixel@{Pixel}}
+\index{Pixel@{Pixel}!Pixel@{Pixel}}
+\doxysubsubsection{\texorpdfstring{Pixel()}{Pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Pixel\+::\+Pixel (\begin{DoxyParamCaption}\item[{unsigned char}]{nr,  }\item[{unsigned char}]{ng,  }\item[{unsigned char}]{nb }\end{DoxyParamCaption})}
 
 
 
-Constructeur de la classe \+: initialise r,g,b avec les paramètres. 
+Constructeur de la classe \+: initialise r,g,b avec respectivement les paramètres nr,ng,nb. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -49,12 +63,17 @@ Constructeur de la classe \+: initialise r,g,b avec les paramètres.
 \hline
 \mbox{\texttt{ in}}  & {\em ng} & un entier strictement positif représentant la composante verte du pixel \\
 \hline
-\mbox{\texttt{ in}}  & {\em nb} & un entier strictement positif représentant la composante bleue du pixel \\
+\mbox{\texttt{ in}}  & {\em nb} & un entier strictement positif représentant la composante bleue du pixel\\
 \hline
 \end{DoxyParams}
-\begin{DoxyRemark}{Remarks}
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_pixel}{Pixel}} blanc (255,255,255);}
+
+\end{DoxyCode}
+ \begin{DoxyWarning}{Warning}
 nr, ng et nb doivent être inférieurs ou égaux à 255 (unsigned char) 
-\end{DoxyRemark}
+\end{DoxyWarning}
 
 
 \doxysubsection{Member Function Documentation}
@@ -69,10 +88,14 @@ nr, ng et nb doivent être inférieurs ou égaux à 255 (unsigned char)
 Accesseur \+: récupère la composante bleue du pixel. 
 
 \begin{DoxyReturn}{Returns}
-unsigned char (entier compris entre 0 et 255) ~\newline
- 
+unsigned char (entier compris entre 0 et 255)
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_pixel_ab0ec14a265184c9452407394a29b65d2}\label{class_pixel_ab0ec14a265184c9452407394a29b65d2}} 
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} nb = un\_Pixel.getBleu();}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_pixel_ab0ec14a265184c9452407394a29b65d2}\label{class_pixel_ab0ec14a265184c9452407394a29b65d2}} 
 \index{Pixel@{Pixel}!getRouge@{getRouge}}
 \index{getRouge@{getRouge}!Pixel@{Pixel}}
 \doxysubsubsection{\texorpdfstring{getRouge()}{getRouge()}}
@@ -83,10 +106,14 @@ unsigned char (entier compris entre 0 et 255) ~\newline
 Accesseur \+: récupère la composante rouge du pixel. 
 
 \begin{DoxyReturn}{Returns}
-unsigned char (entier compris entre 0 et 255) ~\newline
- 
+unsigned char (entier compris entre 0 et 255)
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_pixel_a35afebd6965ea07c3d3c9a4c46176676}\label{class_pixel_a35afebd6965ea07c3d3c9a4c46176676}} 
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} nr = un\_Pixel.getRouge();}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_pixel_a35afebd6965ea07c3d3c9a4c46176676}\label{class_pixel_a35afebd6965ea07c3d3c9a4c46176676}} 
 \index{Pixel@{Pixel}!getVert@{getVert}}
 \index{getVert@{getVert}!Pixel@{Pixel}}
 \doxysubsubsection{\texorpdfstring{getVert()}{getVert()}}
@@ -97,10 +124,14 @@ unsigned char (entier compris entre 0 et 255) ~\newline
 Accesseur \+: récupère la composante verte du pixel. 
 
 \begin{DoxyReturn}{Returns}
-unsigned char (entier compris entre 0 et 255) ~\newline
- 
+unsigned char (entier compris entre 0 et 255)
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_pixel_a706ee4cd16d1098fab21c727c90cb00b}\label{class_pixel_a706ee4cd16d1098fab21c727c90cb00b}} 
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} ng = un\_Pixel.getVert();}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_pixel_a706ee4cd16d1098fab21c727c90cb00b}\label{class_pixel_a706ee4cd16d1098fab21c727c90cb00b}} 
 \index{Pixel@{Pixel}!setBleu@{setBleu}}
 \index{setBleu@{setBleu}!Pixel@{Pixel}}
 \doxysubsubsection{\texorpdfstring{setBleu()}{setBleu()}}
@@ -116,12 +147,16 @@ Mutateur \+: modifie la composante bleue du pixel.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-void ~\newline
- 
+void
 \end{DoxyReturn}
-\begin{DoxyRemark}{Remarks}
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{un\_Pixel.setBleu(213);}
+
+\end{DoxyCode}
+ \begin{DoxyWarning}{Warning}
 nb doit être inférieur ou égal à 255 (usigned char) 
-\end{DoxyRemark}
+\end{DoxyWarning}
 \mbox{\Hypertarget{class_pixel_a46ffac40207a65c1481afcb2b156e433}\label{class_pixel_a46ffac40207a65c1481afcb2b156e433}} 
 \index{Pixel@{Pixel}!setRouge@{setRouge}}
 \index{setRouge@{setRouge}!Pixel@{Pixel}}
@@ -138,12 +173,16 @@ Mutateur \+: modifie la composante rouge du pixel.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-void ~\newline
- 
+void
 \end{DoxyReturn}
-\begin{DoxyRemark}{Remarks}
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{un\_Pixel.setRouge(148);}
+
+\end{DoxyCode}
+ \begin{DoxyWarning}{Warning}
 nr doit être inférieur ou égal à 255 (unsigned char) 
-\end{DoxyRemark}
+\end{DoxyWarning}
 \mbox{\Hypertarget{class_pixel_a9c0b314120976395eaec55e6d07256ca}\label{class_pixel_a9c0b314120976395eaec55e6d07256ca}} 
 \index{Pixel@{Pixel}!setVert@{setVert}}
 \index{setVert@{setVert}!Pixel@{Pixel}}
@@ -160,12 +199,16 @@ Mutateur \+: modifie la composante verte du pixel.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-void ~\newline
- 
+void
 \end{DoxyReturn}
-\begin{DoxyRemark}{Remarks}
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{un\_Pixel.setVert(28);}
+
+\end{DoxyCode}
+ \begin{DoxyWarning}{Warning}
 ng doit être inférieur ou égal à 255 (usigned char) 
-\end{DoxyRemark}
+\end{DoxyWarning}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

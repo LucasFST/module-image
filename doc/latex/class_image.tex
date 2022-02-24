@@ -7,8 +7,7 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_image_a58edd1c45b4faeb5f789b0d036d02313}\label{class_image_a58edd1c45b4faeb5f789b0d036d02313}} 
-{\bfseries Image} ()
+\mbox{\hyperlink{class_image_a58edd1c45b4faeb5f789b0d036d02313}{Image}} ()
 \begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \+: initialise dimx et dimy à 0, ce constructeur n\textquotesingle{}alloue pas de pixel. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_image_a3ee63d37f01ef80f9d8ed5bf8e6fe10d}{Image}} (unsigned int dimx, unsigned int dimy)
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe \+: initialise dimx et dimy (après vérification), puis alloue le tableau de pixel dans le tas (image noire) \end{DoxyCompactList}\item 
@@ -42,10 +41,25 @@ void \mbox{\hyperlink{class_image_a5054efd59e01ba1de7ebd88bdc46a65f}{afficher}} 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_image_a3ee63d37f01ef80f9d8ed5bf8e6fe10d}\label{class_image_a3ee63d37f01ef80f9d8ed5bf8e6fe10d}} 
+\mbox{\Hypertarget{class_image_a58edd1c45b4faeb5f789b0d036d02313}\label{class_image_a58edd1c45b4faeb5f789b0d036d02313}} 
 \index{Image@{Image}!Image@{Image}}
 \index{Image@{Image}!Image@{Image}}
-\doxysubsubsection{\texorpdfstring{Image()}{Image()}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut de la classe \+: initialise dimx et dimy à 0, ce constructeur n\textquotesingle{}alloue pas de pixel. 
+
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_image}{Image}} une\_Image;}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_image_a3ee63d37f01ef80f9d8ed5bf8e6fe10d}\label{class_image_a3ee63d37f01ef80f9d8ed5bf8e6fe10d}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{unsigned int}]{dimx,  }\item[{unsigned int}]{dimy }\end{DoxyParamCaption})}
 
 
@@ -56,12 +70,17 @@ Constructeur de la classe \+: initialise dimx et dimy (après vérification), pu
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em dimx} & la dimension en abcsisse de notre image \\
 \hline
-\mbox{\texttt{ in}}  & {\em dimy} & la dimension en ordonnée de notre image \\
+\mbox{\texttt{ in}}  & {\em dimy} & la dimension en ordonnée de notre image\\
 \hline
 \end{DoxyParams}
-\begin{DoxyRemark}{Remarks}
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_image}{Image}} une\_Image(2,3);}
+
+\end{DoxyCode}
+ \begin{DoxyWarning}{Warning}
 dimx et dimy ne peuvent être supérieurs ou égaux à 50000 (limite arbitraire) 
-\end{DoxyRemark}
+\end{DoxyWarning}
 
 
 \doxysubsection{Member Function Documentation}
@@ -76,9 +95,14 @@ dimx et dimy ne peuvent être supérieurs ou égaux à 50000 (limite arbitraire)
 Affiche l\textquotesingle{}image dans une fenêtre SDL2. 
 
 \begin{DoxyReturn}{Returns}
-void 
+void
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_image_aa3cc6f7401625c11dcd5ef003f37e4fa}\label{class_image_aa3cc6f7401625c11dcd5ef003f37e4fa}} 
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{une\_Image.afficher();}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_image_aa3cc6f7401625c11dcd5ef003f37e4fa}\label{class_image_aa3cc6f7401625c11dcd5ef003f37e4fa}} 
 \index{Image@{Image}!afficherConsole@{afficherConsole}}
 \index{afficherConsole@{afficherConsole}!Image@{Image}}
 \doxysubsubsection{\texorpdfstring{afficherConsole()}{afficherConsole()}}
@@ -89,9 +113,14 @@ void
 Afficher les composantes RGB des pixels sur la console. 
 
 \begin{DoxyReturn}{Returns}
-void 
+void
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_image_ae18101e02b43b2a2285776412cf92936}\label{class_image_ae18101e02b43b2a2285776412cf92936}} 
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{une\_Image.afficherConsole();}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_image_ae18101e02b43b2a2285776412cf92936}\label{class_image_ae18101e02b43b2a2285776412cf92936}} 
 \index{Image@{Image}!dessinerRectangle@{dessinerRectangle}}
 \index{dessinerRectangle@{dessinerRectangle}!Image@{Image}}
 \doxysubsubsection{\texorpdfstring{dessinerRectangle()}{dessinerRectangle()}}
@@ -116,9 +145,15 @@ Dessine un rectangle plein de la couleur désirée dans l\textquotesingle{}image
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-void 
+void
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_image_a62d0c277a049c0ea1da7ba2dd2131c31}\label{class_image_a62d0c277a049c0ea1da7ba2dd2131c31}} 
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_pixel}{Pixel}} Blanc(255,255,255);}
+\DoxyCodeLine{une\_Image.dessinerRectangle(0,0,2,3,Blanc);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_image_a62d0c277a049c0ea1da7ba2dd2131c31}\label{class_image_a62d0c277a049c0ea1da7ba2dd2131c31}} 
 \index{Image@{Image}!effacer@{effacer}}
 \index{effacer@{effacer}!Image@{Image}}
 \doxysubsubsection{\texorpdfstring{effacer()}{effacer()}}
@@ -134,9 +169,15 @@ Efface l\textquotesingle{}image en la remplissant de la couleur passée en param
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-void 
+void
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_image_aa2c1f02bdf9178459b5bb7409ab86648}\label{class_image_aa2c1f02bdf9178459b5bb7409ab86648}} 
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_pixel}{Pixel}} Blanc(255,255,255);}
+\DoxyCodeLine{une\_Image.effacer(Blanc);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_image_aa2c1f02bdf9178459b5bb7409ab86648}\label{class_image_aa2c1f02bdf9178459b5bb7409ab86648}} 
 \index{Image@{Image}!getPix@{getPix}}
 \index{getPix@{getPix}!Image@{Image}}
 \doxysubsubsection{\texorpdfstring{getPix()}{getPix()}}
@@ -154,11 +195,16 @@ Accesseur \+: récupère le pixel original de coordonnées (x,y) en vérifiant l
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-\mbox{\hyperlink{class_pixel}{Pixel}} 
+\mbox{\hyperlink{class_pixel}{Pixel}}
 \end{DoxyReturn}
-\begin{DoxyRemark}{Remarks}
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_pixel}{Pixel}} un\_Pixel = une\_Image.getPix(1,1)}
+
+\end{DoxyCode}
+ \begin{DoxyWarning}{Warning}
 x et y doivent être inférieurs strictement à dimx et dimy respectivement (dimensions de l\textquotesingle{}image) 
-\end{DoxyRemark}
+\end{DoxyWarning}
 \mbox{\Hypertarget{class_image_a504778b71d66c4da931cad497e2ec249}\label{class_image_a504778b71d66c4da931cad497e2ec249}} 
 \index{Image@{Image}!ouvrir@{ouvrir}}
 \index{ouvrir@{ouvrir}!Image@{Image}}
@@ -175,9 +221,14 @@ Ouvrir une image depuis un fichier.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-void 
+void
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_image_af870cb0c00a370927e6957f99a409586}\label{class_image_af870cb0c00a370927e6957f99a409586}} 
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{une\_Image.ouvrir(\textcolor{stringliteral}{"{}../data/image1.ppm"{}});}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_image_af870cb0c00a370927e6957f99a409586}\label{class_image_af870cb0c00a370927e6957f99a409586}} 
 \index{Image@{Image}!sauver@{sauver}}
 \index{sauver@{sauver}!Image@{Image}}
 \doxysubsubsection{\texorpdfstring{sauver()}{sauver()}}
@@ -193,9 +244,14 @@ Sauver une image dans un fichier.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-void 
+void
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_image_a713c922e13a0a05ac88bef756b4ca90d}\label{class_image_a713c922e13a0a05ac88bef756b4ca90d}} 
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{une\_Image.sauver(\textcolor{stringliteral}{"{}../data/image1.ppm"{}});}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_image_a713c922e13a0a05ac88bef756b4ca90d}\label{class_image_a713c922e13a0a05ac88bef756b4ca90d}} 
 \index{Image@{Image}!setPix@{setPix}}
 \index{setPix@{setPix}!Image@{Image}}
 \doxysubsubsection{\texorpdfstring{setPix()}{setPix()}}
@@ -215,11 +271,17 @@ Mutateur \+: modifie la couleur du pixel de coordonnées (x,y) en vérifiant leu
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-void 
+void
 \end{DoxyReturn}
-\begin{DoxyRemark}{Remarks}
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_pixel}{Pixel}} Blanc(255,255,255);}
+\DoxyCodeLine{une\_Image.setPix(1,1,Blanc);}
+
+\end{DoxyCode}
+ \begin{DoxyWarning}{Warning}
 x et y doivent être inférieurs strictement à dimx et dimy respectivement (dimensions de l\textquotesingle{}image) 
-\end{DoxyRemark}
+\end{DoxyWarning}
 \mbox{\Hypertarget{class_image_a82ffef6c89927b0cc755a3fe2fec637b}\label{class_image_a82ffef6c89927b0cc755a3fe2fec637b}} 
 \index{Image@{Image}!testRegression@{testRegression}}
 \index{testRegression@{testRegression}!Image@{Image}}
@@ -231,9 +293,14 @@ x et y doivent être inférieurs strictement à dimx et dimy respectivement (dim
 Effectue une série de tests vérifiant que le module fonctionne et que les données membres de l\textquotesingle{}objet sont conformes. 
 
 \begin{DoxyReturn}{Returns}
-void 
+void
 \end{DoxyReturn}
+Exemple d\textquotesingle{}utilisation \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{une\_Image.testRegression();}
 
+\end{DoxyCode}
+ 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

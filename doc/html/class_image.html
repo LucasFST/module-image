@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Image Class Reference</title>
+<title>Module Image: Image Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Module Image
    </div>
   </td>
  </tr>
@@ -73,9 +73,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a58edd1c45b4faeb5f789b0d036d02313"><td class="memItemLeft" align="right" valign="top"><a id="a58edd1c45b4faeb5f789b0d036d02313" name="a58edd1c45b4faeb5f789b0d036d02313"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Image</b> ()</td></tr>
-<tr class="memdesc:a58edd1c45b4faeb5f789b0d036d02313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut de la classe : initialise dimx et dimy à 0, ce constructeur n'alloue pas de pixel. <br /></td></tr>
+<tr class="memitem:a58edd1c45b4faeb5f789b0d036d02313"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a58edd1c45b4faeb5f789b0d036d02313">Image</a> ()</td></tr>
+<tr class="memdesc:a58edd1c45b4faeb5f789b0d036d02313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut de la classe : initialise dimx et dimy à 0, ce constructeur n'alloue pas de pixel.  <a href="class_image.html#a58edd1c45b4faeb5f789b0d036d02313">More...</a><br /></td></tr>
 <tr class="separator:a58edd1c45b4faeb5f789b0d036d02313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ee63d37f01ef80f9d8ed5bf8e6fe10d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a3ee63d37f01ef80f9d8ed5bf8e6fe10d">Image</a> (unsigned int dimx, unsigned int dimy)</td></tr>
 <tr class="memdesc:a3ee63d37f01ef80f9d8ed5bf8e6fe10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe : initialise dimx et dimy (après vérification), puis alloue le tableau de pixel dans le tas (image noire)  <a href="class_image.html#a3ee63d37f01ef80f9d8ed5bf8e6fe10d">More...</a><br /></td></tr>
@@ -115,8 +114,29 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>{Brossat Pierrick ; Faustmann Lucas} </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a58edd1c45b4faeb5f789b0d036d02313" name="a58edd1c45b4faeb5f789b0d036d02313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58edd1c45b4faeb5f789b0d036d02313">&#9670;&nbsp;</a></span>Image() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Image::Image </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur par défaut de la classe : initialise dimx et dimy à 0, ce constructeur n'alloue pas de pixel. </p>
+<p >Exemple d'utilisation : </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_image.html">Image</a> une_Image;</div>
+<div class="ttc" id="aclass_image_html"><div class="ttname"><a href="class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> Image.h:11</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a id="a3ee63d37f01ef80f9d8ed5bf8e6fe10d" name="a3ee63d37f01ef80f9d8ed5bf8e6fe10d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ee63d37f01ef80f9d8ed5bf8e6fe10d">&#9670;&nbsp;</a></span>Image()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee63d37f01ef80f9d8ed5bf8e6fe10d">&#9670;&nbsp;</a></span>Image() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,11 +165,12 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dimx</td><td>la dimension en abcsisse de notre image </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dimy</td><td>la dimension en ordonnée de notre image </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimy</td><td>la dimension en ordonnée de notre image</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section remark"><dt>Remarks</dt><dd>dimx et dimy ne peuvent être supérieurs ou égaux à 50000 (limite arbitraire) </dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_image.html">Image</a> une_Image(2,3);</div>
+</div><!-- fragment --> <dl class="section warning"><dt>Warning</dt><dd>dimx et dimy ne peuvent être supérieurs ou égaux à 50000 (limite arbitraire) </dd></dl>
 
 </div>
 </div>
@@ -170,8 +191,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Affiche l'image dans une fenêtre SDL2. </p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line">une_Image.afficher();</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="aa3cc6f7401625c11dcd5ef003f37e4fa" name="aa3cc6f7401625c11dcd5ef003f37e4fa"></a>
@@ -190,8 +212,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Afficher les composantes RGB des pixels sur la console. </p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line">une_Image.afficherConsole();</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ae18101e02b43b2a2285776412cf92936" name="ae18101e02b43b2a2285776412cf92936"></a>
@@ -250,8 +273,11 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_pixel.html">Pixel</a> Blanc(255,255,255);</div>
+<div class="line">une_Image.dessinerRectangle(0,0,2,3,Blanc);</div>
+<div class="ttc" id="aclass_pixel_html"><div class="ttname"><a href="class_pixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> Pixel.h:12</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a62d0c277a049c0ea1da7ba2dd2131c31" name="a62d0c277a049c0ea1da7ba2dd2131c31"></a>
@@ -277,8 +303,10 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_pixel.html">Pixel</a> Blanc(255,255,255);</div>
+<div class="line">une_Image.effacer(Blanc);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="aa2c1f02bdf9178459b5bb7409ab86648" name="aa2c1f02bdf9178459b5bb7409ab86648"></a>
@@ -315,8 +343,9 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_pixel.html">Pixel</a> </dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd>x et y doivent être inférieurs strictement à dimx et dimy respectivement (dimensions de l'image) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_pixel.html">Pixel</a></dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_pixel.html">Pixel</a> un_Pixel = une_Image.getPix(1,1)</div>
+</div><!-- fragment --> <dl class="section warning"><dt>Warning</dt><dd>x et y doivent être inférieurs strictement à dimx et dimy respectivement (dimensions de l'image) </dd></dl>
 
 </div>
 </div>
@@ -343,8 +372,9 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line">une_Image.ouvrir(<span class="stringliteral">&quot;../data/image1.ppm&quot;</span>);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="af870cb0c00a370927e6957f99a409586" name="af870cb0c00a370927e6957f99a409586"></a>
@@ -370,8 +400,9 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line">une_Image.sauver(<span class="stringliteral">&quot;../data/image1.ppm&quot;</span>);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a713c922e13a0a05ac88bef756b4ca90d" name="a713c922e13a0a05ac88bef756b4ca90d"></a>
@@ -415,8 +446,10 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd>x et y doivent être inférieurs strictement à dimx et dimy respectivement (dimensions de l'image) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_pixel.html">Pixel</a> Blanc(255,255,255);</div>
+<div class="line">une_Image.setPix(1,1,Blanc);</div>
+</div><!-- fragment --> <dl class="section warning"><dt>Warning</dt><dd>x et y doivent être inférieurs strictement à dimx et dimy respectivement (dimensions de l'image) </dd></dl>
 
 </div>
 </div>
@@ -436,8 +469,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Effectue une série de tests vérifiant que le module fonctionne et que les données membres de l'objet sont conformes. </p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line">une_Image.testRegression();</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
