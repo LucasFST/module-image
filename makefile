@@ -39,7 +39,7 @@ veryclean : clean
 	rm -rf $(BIN)
 
 clean :
-	rm $(BIN)/*.o
+	rm -f $(BIN)/*.o
 
 
 
