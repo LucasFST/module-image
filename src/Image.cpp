@@ -38,7 +38,7 @@ Image::~Image()
 
 
 
-Pixel Image::getPix (unsigned int x,unsigned int y) const //retourne Pixel ou Pixel& ou Pixel*
+Pixel& Image::getPix (unsigned int x,unsigned int y) const //retourne Pixel ou Pixel& ou Pixel*
 {
     assert (x<dimx && y<dimy ); //x et y doivent être respectivement plus petit que dimx et dimy
     return tab[y*dimx+x];  //formule pour passer d'un tab 2D à un tab 1D
@@ -126,7 +126,7 @@ void Image::sauver(const string & filename) const
     for(unsigned int y=0; y<dimy; y++) 
         for(unsigned int x=0; x<dimx; x++) 
         {
-            Pixel pix = getPix(x,y); 
+            Pixel pix = getPix(x,y); //Pixel& ?????????
             fichier << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " "; 
         }
     cout << "Sauvegarde de l'image " << filename << " ... OK\n";
@@ -148,7 +148,7 @@ void Image::ouvrir(const string & filename)
         for(unsigned int x=0; x<dimx; x++) 
         {
             fichier >> r >> g >> b;  
-            Pixel couleur(stoi(r),stoi(g), stoi(b)); //stoi() string to int (unsigned int ça serait mieux)
+            Pixel couleur(stoi(r),stoi(g), stoi(b)); //stoi() string to int (unsigned char ça serait mieux)
             setPix(x,y,couleur);   
             setPix(x,y,couleur);
             setPix(x,y,couleur);
@@ -164,7 +164,7 @@ void Image::afficherConsole()
     {
         for(unsigned int x=0; x<dimx; x++) 
         {
-            Pixel pix = getPix(x,y); 
+            Pixel pix = getPix(x,y); //Pixel& ?????????
             cout << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
         cout << endl;
