@@ -121,8 +121,7 @@ class Image {
         * une_Image.testRegression();
         * @endcode
         */
-        void testRegression ();  //Pertinent ou pas de documenter cette fonction ????????????
-
+        void testRegression ();  
         
         /**
         * @brief Sauver une image dans un fichier
