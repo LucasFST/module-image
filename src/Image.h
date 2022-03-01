@@ -172,10 +172,15 @@ class Image {
         */
         void afficher() const;
 
+        void afficherInit (); 
+
     private:
 
         unsigned int dimx,dimy;
         Pixel* tab;
+        SDL_window * window;
+        SDL_Renderer * renderer;
+
 
 };
 
