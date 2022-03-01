@@ -178,8 +178,8 @@ class Image {
 
         unsigned int dimx,dimy;
         Pixel* tab;
-        SDL_window * window;
-        SDL_Renderer * renderer;
+        //SDL_window * window;
+        //SDL_Renderer * renderer;
 };
 
 #endif
