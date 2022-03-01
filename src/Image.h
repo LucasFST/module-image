@@ -3,6 +3,10 @@
 
 #include "Pixel.h"
 #include <iostream>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_image.h>
+
 using namespace std;
 
 /**
@@ -172,7 +176,11 @@ class Image {
         */
         void afficher() const;
 
-        void afficherInit (); 
+        void afficherInit ()const; 
+
+        void afficherBoucle ()const;
+
+
 
     private:
 
