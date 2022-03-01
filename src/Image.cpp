@@ -142,7 +142,7 @@ void Image::ouvrir(const string & filename)
 {
     ifstream fichier (filename.c_str());
     assert(fichier.is_open());
-    char r,g,b; 
+    string r,g,b; //à la place de char car char fait chiffre par chiffre
     dimx = dimy = 0; 
     fichier >> dimx >> dimy; 
     assert(dimx > 0 && dimy > 0);
@@ -153,7 +153,7 @@ void Image::ouvrir(const string & filename)
         {
             fichier >> r >> g >> b;  
             cout<<r<<" "<<g<<" "<<b<<endl;
-            Pixel couleur(r,g,b);
+            Pixel couleur(stoi(r),stoi(g),stoi(b)); //car string et pas char
             setPix(x,y,couleur);   
         }
     fichier.close();
