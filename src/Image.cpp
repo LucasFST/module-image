@@ -38,7 +38,7 @@ Image::~Image()
 
 
 
-Pixel& Image::getPix (unsigned int x,unsigned int y) const //retourne Pixel ou Pixel& ou Pixel*
+Pixel& Image::getPix (unsigned int x,unsigned int y) const 
 {
     assert (x<dimx && y<dimy ); //x et y doivent être respectivement plus petit que dimx et dimy
     return tab[y*dimx+x];  //formule pour passer d'un tab 2D à un tab 1D
@@ -80,18 +80,23 @@ void Image::effacer (const Pixel& couleur)
 
 void Image::testRegression ()
 {
+
+    //test constructeur par défaut 
+    Image img;
+    assert (img.dimx==0 && img.dimy==0 && img.tab==NULL);
+
     dimx=2; //valeur choisi arbitrairement 
     dimy=3; //valeur choisi arbitrairement 
 
     tab = new Pixel[dimx*dimy]; //on alloue un tab de pixel sur le tas avec les valeurs dimx et dimy
-    Pixel pxTestNoir = getPix(1,2); //on prend un pixel dans l'image
+    Pixel& pxTestNoir = getPix(1,2); //on prend un pixel dans l'image
     assert(pxTestNoir.getVert()==0);//on teste si ce pixel est bien noir (couleur par defaut = 0;0;0)
     assert(pxTestNoir.getRouge()==0);
     assert(pxTestNoir.getBleu()==0);
 
     Pixel pxBlanc(255,255,255); //on creer un pixel blanc 
     dessinerRectangle(0,0,1,1, pxBlanc); // on dessine un rectangle avec ce pixel (en blanc) sur une partie de l'image 
-    Pixel pxTestBlanc = getPix(0,0); //on prend un pixel dans ce rectangle 
+    Pixel& pxTestBlanc = getPix(0,0); //on prend un pixel dans ce rectangle 
     assert(pxTestBlanc.getVert()==255); // on teste si il est bien blanc (255,255,255)
     assert(pxTestBlanc.getRouge()==255);
     assert(pxTestBlanc.getBleu()==255);
@@ -109,7 +114,7 @@ void Image::testRegression ()
 
     Pixel pxCouleur(145,167,23); //on creer un pixel(pxCouleur) d'une couleur arbitraire
     setPix(1,1,pxCouleur); //on change un pixel blanc par le pxCouleur 
-    Pixel Test = getPix(1,1); //on recupere le pixel que l'on vient de modifier 
+    Pixel& Test = getPix(1,1); //on recupere le pixel que l'on vient de modifier 
     assert(Test.getRouge()==145); //on verifie qu'il est bien de la couleur que l'on souhaite 
     assert(Test.getVert()==167);
     assert(Test.getBleu()==23);
@@ -137,8 +142,7 @@ void Image::ouvrir(const string & filename)
 {
     ifstream fichier (filename.c_str());
     assert(fichier.is_open());
-    string r,g,b; 
-    string mot;
+    char r,g,b; 
     dimx = dimy = 0; 
     fichier >> dimx >> dimy; 
     assert(dimx > 0 && dimy > 0);
@@ -148,7 +152,8 @@ void Image::ouvrir(const string & filename)
         for(unsigned int x=0; x<dimx; x++) 
         {
             fichier >> r >> g >> b;  
-            Pixel couleur(stoi(r),stoi(g), stoi(b)); //stoi() string to int (unsigned char ça serait mieux)
+            cout<<r<<" "<<g<<" "<<b<<endl;
+            Pixel couleur(r,g,b);
             setPix(x,y,couleur);   
         }
     fichier.close();
@@ -162,7 +167,7 @@ void Image::afficherConsole()
     {
         for(unsigned int x=0; x<dimx; x++) 
         {
-            Pixel& pix = getPix(x,y); 
+            Pixel pix = getPix(x,y); 
             cout << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
         cout << endl;
