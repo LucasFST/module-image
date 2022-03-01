@@ -180,6 +180,7 @@ class Image {
 
         void afficherBoucle ()const;
 
+        void afficherDetruit ()const;
 
 
     private:
@@ -188,8 +189,6 @@ class Image {
         Pixel* tab;
         SDL_window * window;
         SDL_Renderer * renderer;
-
-
 };
 
 #endif
