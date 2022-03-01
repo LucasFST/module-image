@@ -126,7 +126,7 @@ void Image::sauver(const string & filename) const
     for(unsigned int y=0; y<dimy; y++) 
         for(unsigned int x=0; x<dimx; x++) 
         {
-            Pixel pix = getPix(x,y); //Pixel& ?????????
+            Pixel& pix = getPix(x,y); 
             fichier << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " "; 
         }
     cout << "Sauvegarde de l'image " << filename << " ... OK\n";
@@ -150,8 +150,6 @@ void Image::ouvrir(const string & filename)
             fichier >> r >> g >> b;  
             Pixel couleur(stoi(r),stoi(g), stoi(b)); //stoi() string to int (unsigned char ça serait mieux)
             setPix(x,y,couleur);   
-            setPix(x,y,couleur);
-            setPix(x,y,couleur);
         }
     fichier.close();
     cout << "Lecture de l'image " << filename << " ... OK\n";
@@ -164,7 +162,7 @@ void Image::afficherConsole()
     {
         for(unsigned int x=0; x<dimx; x++) 
         {
-            Pixel pix = getPix(x,y); //Pixel& ?????????
+            Pixel& pix = getPix(x,y); 
             cout << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
         cout << endl;
