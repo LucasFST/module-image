@@ -3,6 +3,7 @@
 #include <cassert>
 #include <fstream>
 #include <string.h>
+
 using namespace std;
 
 //constructeur de l'image par defaut 
@@ -208,6 +209,15 @@ window = SDL_CreateWindow("Image", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERE
 }
 
 
+void Image::afficherBoucle()
+{
+
+
+
+
+
+
+}
 
 
 */
