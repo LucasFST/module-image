@@ -180,8 +180,6 @@ class Image {
         Pixel* tab;
         SDL_window * window;
         SDL_Renderer * renderer;
-
-
 };
 
 #endif
