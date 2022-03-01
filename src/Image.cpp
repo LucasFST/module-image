@@ -142,8 +142,7 @@ void Image::ouvrir(const string & filename)
 {
     ifstream fichier (filename.c_str());
     assert(fichier.is_open());
-    string r,g,b; 
-    string mot;
+    char r,g,b; 
     dimx = dimy = 0; 
     fichier >> dimx >> dimy; 
     assert(dimx > 0 && dimy > 0);
@@ -153,7 +152,8 @@ void Image::ouvrir(const string & filename)
         for(unsigned int x=0; x<dimx; x++) 
         {
             fichier >> r >> g >> b;  
-            Pixel couleur(stoi(r),stoi(g), stoi(b)); //stoi() string to int (unsigned char ça serait mieux)
+            cout<<r<<" "<<g<<" "<<b<<endl;
+            Pixel couleur(r,g,b);
             setPix(x,y,couleur);   
         }
     fichier.close();
@@ -167,7 +167,7 @@ void Image::afficherConsole()
     {
         for(unsigned int x=0; x<dimx; x++) 
         {
-            Pixel& pix = getPix(x,y); 
+            Pixel pix = getPix(x,y); 
             cout << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
         cout << endl;
