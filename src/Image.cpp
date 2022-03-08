@@ -184,7 +184,7 @@ void Image::afficher() const
 
 
 
-/* 
+
 void Image::afficherInit(){
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         cout << "Erreur lors de l'initialisation de la SDL : " << SDL_GetError() << endl;
