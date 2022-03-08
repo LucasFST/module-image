@@ -9,8 +9,6 @@ BIN2 := bin/exemple
 BIN3 := bin/affichage
 SRC := src
 
-INCLUDE_DIR_SDL := -I/usr/include/SDL2
-LIBS_SDL := -lSDL2 -lSDL2_ttf -lSDL2_image -lSDL2_mixer
 
 all : $(BIN1) $(BIN2) $(BIN3)
 
@@ -20,8 +18,8 @@ $(BIN1) : $(BIN)/mainTest.o $(OBJS1)
 $(BIN2) : $(BIN)/mainExemple.o $(OBJS1)
 	$(CC) $(CCFLAGS) $(BIN)/mainExemple.o $(OBJS1) -o $(BIN2) 
 
-$(BIN3) : $(BIN)/mainAffichage.o $(OBJS1)
-	$(CC) $(CCFLAGS) $(BIN)/mainAffichage.o $(OBJS1) -o $(BIN3) $(LIBS_SDL)
+bin/affichage : bin/mainAffichage.o bin/Pixel.o  bin/Image.o 
+	$(CC) $(CCFLAGS) bin/mainAffichage.o bin/Pixel.o  bin/Image.o -o bin/affichage -lSDL2 -lSDL2_image
 
 $(BIN)/mainTest.o : $(SRC)/mainTest.cpp $(OBJS2)
 	$(CC) $(CCFLAGS) -c $(SRC)/mainTest.cpp -o $(BIN)/mainTest.o
@@ -29,8 +27,8 @@ $(BIN)/mainTest.o : $(SRC)/mainTest.cpp $(OBJS2)
 $(BIN)/mainExemple.o : $(SRC)/mainExemple.cpp $(OBJS2)
 	$(CC) $(CCFLAGS) -c $(SRC)/mainExemple.cpp -o $(BIN)/mainExemple.o 
 
-$(BIN)/mainAffichage.o : $(SRC)/mainAffichage.cpp $(OBJS2)
-	$(CC) $(CCFLAGS) -c $(SRC)/mainAffichage.cpp -o $(BIN)/mainAffichage.o $(INCLUDE_DIR_SDL)
+bin/mainAffichage.o : src/mainAffichage.cpp src/Image.h src/Pixel.h
+	$(CC) $(CCFLAGS) -c mainAffichage.cpp -o bin/mainAffichage.o -ISDL2
 
 $(BIN)/Image.o : $(SRC)/Image.cpp $(OBJS2)
 	$(CC) $(CCFLAGS) -c $(SRC)/Image.cpp -o $(BIN)/Image.o

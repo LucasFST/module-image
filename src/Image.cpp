@@ -177,7 +177,17 @@ void Image::afficherConsole()
     }
 }
 
-void Image::afficher() const
+
+
+
+
+
+
+
+
+
+
+void Image::afficher() 
 {
     afficherInit();
     afficherBoucle();
@@ -186,13 +196,10 @@ void Image::afficher() const
 
 
 
-
-void Image::afficherInit() const
+void Image::afficherInit() 
 {
-    SDL_Window *window = NULL;
-    SDL_Renderer *renderer = NULL;
-    SDL_Texture *bitmapTex = NULL;
-    SDL_Surface *bitmapSurface = NULL;
+    // window = NULL;
+    // renderer = NULL;
 
     if (SDL_Init(SDL_INIT_VIDEO) < 0) 
     {
@@ -211,17 +218,16 @@ void Image::afficherInit() const
 
     renderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
 
-    sauver("data/imageSDL.bmp");
+    sauver("data/image.ppm");
 
-    bitmapSurface = IMG_Load("data/imageSDL.bmp");
-    bitmapTex = SDL_CreateTextureFromSurface(renderer, bitmapSurface);
+    imageSDL.loadFromFile("data/image.ppm", renderer);
+    // imageSDL.loadFromCurrentSurface(renderer);
 
 }
 
 
-void Image::afficherBoucle() const
+void Image::afficherBoucle() 
     {
-        Picture imageSDL;
         bool stop = false;
         SDL_Event events;
         int h,w;
@@ -257,18 +263,25 @@ void Image::afficherBoucle() const
             imageSDL.draw(renderer, 100, 100, w, h);
             SDL_RenderPresent(renderer);
         }
-    }
+}
 
 
-void Image::afficherDetruit ()const
+void Image::afficherDetruit ()
 {
-    SDL_DestroyTexture(bitmapTex); 
     SDL_DestroyRenderer(renderer); 
-    SDL_DestroyWindow(win); 
+    SDL_DestroyWindow(window); 
     SDL_Quit();
 }
 
+
+
+
+
+
 //-------------------------------------------------- Class Picture
+
+
+
 
 Picture::Picture () 
 {
@@ -307,8 +320,6 @@ void Picture::loadFromFile (const char* filename, SDL_Renderer * renderer) {
         exit(1);
     }
 }
-
-
 
 
 
