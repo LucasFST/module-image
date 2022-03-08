@@ -38,11 +38,10 @@ $(BIN)/Pixel.o : $(SRC)/Pixel.cpp $(SRC)/Pixel.h
 
 
 
-veryclean : clean
-	rm -rf $(BIN)
+
 
 clean :
-	rm -f $(BIN)/*.o
+	rm -f bin/*
 
 
 
