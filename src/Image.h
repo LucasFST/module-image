@@ -191,4 +191,25 @@ class Image {
         //SDL_Renderer * renderer;
 };
 
+
+//----------------------------------------------------------
+
+//! \brief Pour gérer une image avec SDL2
+class Picture {
+
+private:
+
+    SDL_Surface * surface;
+    SDL_Texture * texture;
+    bool has_changed;
+
+public:
+    Picture () ;
+    void loadFromFile (const char* filename, SDL_Renderer * renderer);  //charger l'image à afficher
+    void loadFromCurrentSurface (SDL_Renderer * renderer);  //mettre l'image dans le renderer pour qu'il puisse la dessiner et donc l'afficher
+    void draw (SDL_Renderer * renderer, int x, int y, int w=-1, int h=-1);  //dessiner l'image que pointe le renderer et suivant les coordonnées x y (w et h ? zoom ?)
+    SDL_Texture * getTexture() const;
+    void setSurface(SDL_Surface * surf);
+};
+
 #endif

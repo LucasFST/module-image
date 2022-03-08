@@ -179,45 +179,183 @@ void Image::afficherConsole()
 
 void Image::afficher() const
 {
-    
+    afficherInit();
+    afficherBoucle();
+    afficherDetruit();
 }
 
 
 
 
-void Image::afficherInit(){
-    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+void Image::afficherInit() const
+{
+    SDL_Window *window = NULL;
+    SDL_Renderer *renderer = NULL;
+    SDL_Texture *bitmapTex = NULL;
+    SDL_Surface *bitmapSurface = NULL;
+
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) 
+    {
         cout << "Erreur lors de l'initialisation de la SDL : " << SDL_GetError() << endl;
         SDL_Quit();
         exit(1);
     }
 
-    if (TTF_Init() != 0) {
-        cout << "Erreur lors de l'initialisation de la SDL_ttf : " << TTF_GetError() << endl;
-        SDL_Quit();
-        exit(1);
-    }
-
-window = SDL_CreateWindow("Image", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, dimx, dimy, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
-    if (window == NULL) {
+    window = SDL_CreateWindow("Image", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 200, 200, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+    if (window == NULL) 
+    {
         cout << "Erreur lors de la creation de la fenetre : " << SDL_GetError() << endl; 
         SDL_Quit(); 
         exit(1);
     }
 
     renderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
+
+    sauver("data/imageSDL.bmp");
+
+    bitmapSurface = IMG_Load("data/imageSDL.bmp");
+    bitmapTex = SDL_CreateTextureFromSurface(renderer, bitmapSurface);
+
 }
 
 
-void Image::afficherBoucle()
+void Image::afficherBoucle() const
     {
-
-
-
-
-
-
+        Picture imageSDL;
+        bool stop = false;
+        SDL_Event events;
+        int h,w;
+        h=10;
+        w=10;
+        while (!stop)
+        {
+            while (SDL_PollEvent(&events)) 
+            {
+            
+            if (events.type == SDL_QUIT) stop = true;           // Si l'utilisateur a clique sur la croix de fermeture
+            else if (events.type == SDL_KEYDOWN) 
+            {              // Si une touche est enfoncee
+                switch (events.key.keysym.scancode) 
+                {
+                case SDL_SCANCODE_ESCAPE:
+                    stop = true;
+                case SDL_SCANCODE_G:
+                    h=h*(2/3);
+                    if(h<5) h=5;
+                    w=w*(2/3);
+                    if(w<5) w=5;
+                    break;
+                case SDL_SCANCODE_T:
+                    h=h*(3/2);
+                    w=w*(3/2);
+                    break;
+                default: break;
+                }
+            }
+            }
+            SDL_RenderClear(renderer);
+            imageSDL.draw(renderer, 100, 100, w, h);
+            SDL_RenderPresent(renderer);
+        }
     }
 
 
-*/
+void Image::afficherDetruit ()const
+{
+    SDL_DestroyTexture(bitmapTex); 
+    SDL_DestroyRenderer(renderer); 
+    SDL_DestroyWindow(win); 
+    SDL_Quit();
+}
+
+//-------------------------------------------------- Class Picture
+
+Picture::Picture () 
+{
+    surface = NULL;
+    texture = NULL;
+    has_changed = false;
+}
+
+
+
+void Picture::loadFromFile (const char* filename, SDL_Renderer * renderer) {
+    surface = IMG_Load(filename);
+    if (surface == NULL) {
+        string nfn = string("../") + filename;
+        cout << "Error: cannot load "<< filename <<". Trying "<<nfn<<endl;
+        surface = IMG_Load(nfn.c_str());
+        if (surface == NULL) {
+            nfn = string("../") + nfn;
+            surface = IMG_Load(nfn.c_str());
+        }
+    }
+    if (surface == NULL) {
+        cout<<"Error: cannot load "<< filename <<endl;
+        SDL_Quit();
+        exit(1);
+    }
+
+    SDL_Surface * surfaceCorrectPixelFormat = SDL_ConvertSurfaceFormat(surface,SDL_PIXELFORMAT_ARGB8888,0);
+    SDL_FreeSurface(surface);
+    surface = surfaceCorrectPixelFormat;
+
+    texture = SDL_CreateTextureFromSurface(renderer,surfaceCorrectPixelFormat);
+    if (texture == NULL) {
+        cout << "Error: problem to create the texture of "<< filename<< endl;
+        SDL_Quit();
+        exit(1);
+    }
+}
+
+
+
+
+
+
+void Picture::loadFromCurrentSurface (SDL_Renderer * renderer) {
+    texture = SDL_CreateTextureFromSurface(renderer,surface);
+    if (texture == NULL) {
+        cout << "Error: problem to create the texture from surface " << endl;
+        SDL_Quit();
+        exit(1);
+    }
+}
+
+
+
+
+
+
+void Picture::draw (SDL_Renderer * renderer, int x, int y, int w, int h) {
+    int ok;
+    SDL_Rect r;
+    r.x = x;
+    r.y = y;
+    r.w = (w<0)?surface->w:w;
+    r.h = (h<0)?surface->h:h;
+
+    if (has_changed) {
+        ok = SDL_UpdateTexture(texture,NULL,surface->pixels,surface->pitch);
+        assert(ok == 0);
+        has_changed = false;
+    }
+
+    ok = SDL_RenderCopy(renderer,texture,NULL,&r);
+    assert(ok == 0);
+}
+
+
+
+
+
+SDL_Texture * Picture::getTexture() const {return texture;}
+
+
+
+
+
+
+void Picture::setSurface(SDL_Surface * surf) {surface = surf;}
+
+
