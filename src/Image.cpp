@@ -128,7 +128,9 @@ void Image::sauver(const string & filename) const
 {
     ofstream fichier (filename.c_str());
     assert(fichier.is_open());
+    fichier << "P3" << endl;
     fichier << dimx << " " << dimy << endl;
+    fichier << "255" << endl;
     for(unsigned int y=0; y<dimy; y++) 
         for(unsigned int x=0; x<dimx; x++) 
         {
@@ -144,8 +146,9 @@ void Image::ouvrir(const string & filename)
     ifstream fichier (filename.c_str());
     assert(fichier.is_open());
     string r,g,b; //à la place de char car char fait chiffre par chiffre
+    string mot;
     dimx = dimy = 0; 
-    fichier >> dimx >> dimy; 
+    fichier >> mot >> dimx >> dimy >> mot;
     assert(dimx > 0 && dimy > 0);
     if (tab != NULL) delete [] tab;
     tab = new Pixel [dimx*dimy];
