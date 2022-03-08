@@ -218,7 +218,7 @@ void Image::afficherInit()
 
     renderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
 
-    sauver("data/image.ppm");
+    sauver("./data/image.ppm");
 
     imageSDL.loadFromFile("data/image.ppm", renderer);
     // imageSDL.loadFromCurrentSurface(renderer);
@@ -230,9 +230,10 @@ void Image::afficherBoucle()
     {
         bool stop = false;
         SDL_Event events;
-        int h,w;
+        int h,w,DIM;
         h=10;
         w=10;
+        DIM=200;
         while (!stop)
         {
             while (SDL_PollEvent(&events)) 
@@ -246,21 +247,21 @@ void Image::afficherBoucle()
                 case SDL_SCANCODE_ESCAPE:
                     stop = true;
                 case SDL_SCANCODE_G:
-                    h=h*(2/3);
-                    if(h<5) h=5;
-                    w=w*(2/3);
+                    h=h*0.75;
+                    w=w*0.75;
                     if(w<5) w=5;
+                    if(h<5) h=5;
                     break;
                 case SDL_SCANCODE_T:
-                    h=h*(3/2);
-                    w=w*(3/2);
+                    h=h*2;
+                    w=w*2;
                     break;
                 default: break;
                 }
             }
             }
             SDL_RenderClear(renderer);
-            imageSDL.draw(renderer, 100, 100, w, h);
+            imageSDL.draw(renderer, (DIM/2)-w/2, (DIM/2)-h/2, w, h);
             SDL_RenderPresent(renderer);
         }
 }
