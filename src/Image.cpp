@@ -12,6 +12,8 @@ Image::Image()
     dimx=0;
     dimy=0;
     tab = NULL;
+    window = NULL;
+    renderer = NULL;
 }
 
 
@@ -33,10 +35,17 @@ Image::~Image()
        delete[] tab;
     }
     tab=NULL;
+    if(window != NULL) 
+    {
+       window = NULL;
+    }
+    if(renderer != NULL) 
+    {
+       renderer = NULL;
+    }
     dimx=0;
-     dimy=0;
+    dimy=0;
 }
-
 
 
 Pixel& Image::getPix (unsigned int x,unsigned int y) const 
@@ -44,7 +53,6 @@ Pixel& Image::getPix (unsigned int x,unsigned int y) const
     assert (x<dimx && y<dimy ); //x et y doivent être respectivement plus petit que dimx et dimy
     return tab[y*dimx+x];  //formule pour passer d'un tab 2D à un tab 1D
 }
-
 
 
 void Image::setPix (unsigned int x,unsigned int y, const Pixel& couleur)
@@ -55,8 +63,6 @@ void Image::setPix (unsigned int x,unsigned int y, const Pixel& couleur)
     tab [y*dimx+x].setVert(couleur.getVert());
     tab [y*dimx+x].setBleu(couleur.getBleu());
 }
-
-
 
 
 void Image::dessinerRectangle (unsigned int Xmin,unsigned int Ymin,unsigned int Xmax,unsigned int Ymax, const Pixel& couleur)
@@ -72,12 +78,11 @@ void Image::dessinerRectangle (unsigned int Xmin,unsigned int Ymin,unsigned int 
 }
 
 
-
-
 void Image::effacer (const Pixel& couleur)
 {
     dessinerRectangle (0,0,dimx-1,dimy-1,couleur); // on recouvre toute l'image par la couleur en parametre grâce a dessinerRectange 
 }
+
 
 void Image::testRegression ()
 {
@@ -141,6 +146,7 @@ void Image::sauver(const string & filename) const
     fichier.close();
 }
 
+
 void Image::ouvrir(const string & filename) 
 {
     ifstream fichier (filename.c_str());
@@ -163,6 +169,7 @@ void Image::ouvrir(const string & filename)
     cout << "Lecture de l'image " << filename << " ... OK\n";
 }
 
+
 void Image::afficherConsole()
 {
     cout << dimx << " " << dimy << endl;
@@ -178,15 +185,6 @@ void Image::afficherConsole()
 }
 
 
-
-
-
-
-
-
-
-
-
 void Image::afficher() 
 {
     afficherInit();
@@ -195,11 +193,8 @@ void Image::afficher()
 }
 
 
-
 void Image::afficherInit() 
 {
-    // window = NULL;
-    // renderer = NULL;
 
     if (SDL_Init(SDL_INIT_VIDEO) < 0) 
     {
@@ -221,49 +216,49 @@ void Image::afficherInit()
     sauver("./data/image.ppm");
 
     imageSDL.loadFromFile("data/image.ppm", renderer);
-    // imageSDL.loadFromCurrentSurface(renderer);
+    imageSDL.loadFromCurrentSurface(renderer);
 
 }
 
 
 void Image::afficherBoucle() 
+{
+    bool stop = false;
+    SDL_Event events;
+    int h,w,DIM;
+    h=10;
+    w=10;
+    DIM=200;
+    while (!stop)
     {
-        bool stop = false;
-        SDL_Event events;
-        int h,w,DIM;
-        h=10;
-        w=10;
-        DIM=200;
-        while (!stop)
+        while (SDL_PollEvent(&events)) 
         {
-            while (SDL_PollEvent(&events)) 
+        
+        if (events.type == SDL_QUIT) stop = true;           // Si l'utilisateur a clique sur la croix de fermeture
+        else if (events.type == SDL_KEYDOWN) 
+        {              // Si une touche est enfoncee
+            switch (events.key.keysym.scancode) 
             {
-            
-            if (events.type == SDL_QUIT) stop = true;           // Si l'utilisateur a clique sur la croix de fermeture
-            else if (events.type == SDL_KEYDOWN) 
-            {              // Si une touche est enfoncee
-                switch (events.key.keysym.scancode) 
-                {
-                case SDL_SCANCODE_ESCAPE:
-                    stop = true;
-                case SDL_SCANCODE_G:
-                    h=h*0.75;
-                    w=w*0.75;
-                    if(w<5) w=5;
-                    if(h<5) h=5;
-                    break;
-                case SDL_SCANCODE_T:
-                    h=h*2;
-                    w=w*2;
-                    break;
-                default: break;
-                }
+            case SDL_SCANCODE_ESCAPE:
+                stop = true;
+            case SDL_SCANCODE_G:
+                h=h*0.75;
+                w=w*0.75;
+                if(w<5) w=5;
+                if(h<5) h=5;
+                break;
+            case SDL_SCANCODE_T:
+                h=h*2;
+                w=w*2;
+                break;
+            default: break;
             }
-            }
-            SDL_RenderClear(renderer);
-            imageSDL.draw(renderer, (DIM/2)-w/2, (DIM/2)-h/2, w, h);
-            SDL_RenderPresent(renderer);
         }
+        }
+        SDL_RenderClear(renderer);
+        imageSDL.draw(renderer, (DIM/2)-w/2, (DIM/2)-h/2, w, h);
+        SDL_RenderPresent(renderer);
+    }
 }
 
 
@@ -276,12 +271,7 @@ void Image::afficherDetruit ()
 
 
 
-
-
-
 //-------------------------------------------------- Class Picture
-
-
 
 
 Picture::Picture () 
@@ -291,6 +281,18 @@ Picture::Picture ()
     has_changed = false;
 }
 
+
+Picture::~Picture () 
+{
+    if(surface != NULL) 
+    {
+       surface = NULL;
+    }
+     if(texture != NULL) 
+    {
+       texture = NULL;
+    }
+}
 
 
 void Picture::loadFromFile (const char* filename, SDL_Renderer * renderer) {
@@ -323,8 +325,6 @@ void Picture::loadFromFile (const char* filename, SDL_Renderer * renderer) {
 }
 
 
-
-
 void Picture::loadFromCurrentSurface (SDL_Renderer * renderer) {
     texture = SDL_CreateTextureFromSurface(renderer,surface);
     if (texture == NULL) {
@@ -333,10 +333,6 @@ void Picture::loadFromCurrentSurface (SDL_Renderer * renderer) {
         exit(1);
     }
 }
-
-
-
-
 
 
 void Picture::draw (SDL_Renderer * renderer, int x, int y, int w, int h) {
