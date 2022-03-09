@@ -8,6 +8,7 @@ using namespace std;
 /**
 *   @author {Brossat Pierrick ; Faustmann Lucas}
 */
+
 class Pixel
 {
 	public :
@@ -20,8 +21,7 @@ class Pixel
      * Pixel un_Pixel;
      * @endcode
     */
-
-   Pixel ();
+    Pixel ();
 
     /**
      * @brief   Constructeur de la classe : initialise r,g,b avec respectivement les paramètres nr,ng,nb
@@ -35,8 +35,7 @@ class Pixel
      * @endcode
      * @warning nr, ng et nb doivent être inférieurs ou égaux à 255 (unsigned char)
     */
-
-   Pixel (unsigned char nr, unsigned char ng, unsigned char nb);
+    Pixel (unsigned char nr, unsigned char ng, unsigned char nb);
 
     /**
      * @brief   Accesseur : récupère la composante rouge du pixel
@@ -47,8 +46,7 @@ class Pixel
      * unsigned char nr = un_Pixel.getRouge();
      * @endcode    
     */
-
-   unsigned char getRouge () const;
+    unsigned char getRouge () const;
 
     /**
      * @brief   Accesseur : récupère la composante verte du pixel
@@ -59,8 +57,7 @@ class Pixel
      * unsigned char ng = un_Pixel.getVert();
      * @endcode        
     */
-
-   unsigned char getVert () const;
+    unsigned char getVert () const;
 
     /**
      * @brief   Accesseur : récupère la composante bleue du pixel
@@ -71,8 +68,7 @@ class Pixel
      * unsigned char nb = un_Pixel.getBleu();
      * @endcode       
     */
-
-   unsigned char getBleu () const;
+    unsigned char getBleu () const;
 
     /**
      * @brief  Mutateur : modifie la composante rouge du pixel
@@ -85,8 +81,7 @@ class Pixel
      * @endcode    
      * @warning nr doit être inférieur ou égal à 255 (unsigned char)
     */
-
-   void setRouge (unsigned char nr);
+    void setRouge (unsigned char nr);
 
     /**
      * @brief  Mutateur : modifie la composante verte du pixel
@@ -99,8 +94,7 @@ class Pixel
      * @endcode   
      * @warning ng doit être inférieur ou égal à 255 (usigned char)
     */
-
-   void setVert (unsigned char ng);
+    void setVert (unsigned char ng);
 
     /**
      * @brief  Mutateur : modifie la composante bleue du pixel
@@ -113,10 +107,9 @@ class Pixel
      * @endcode     
      * @warning nb doit être inférieur ou égal à 255 (usigned char)
     */   
+    void setBleu (unsigned char nb);
 
-   void setBleu (unsigned char nb);
-
-   private :
+    private :
     
     unsigned char r,g,b;    
 };

@@ -15,56 +15,61 @@ using namespace std;
 class Picture {
 
 public:
-        /**
-        * @brief Constructeur par défaut de la classe
-        * 
-        * Exemple d'utilisation :
-        * @code
-        * Picture une_Picture;
-        * @endcode
-        */
+
+    /**
+    * @brief Constructeur par défaut de la classe
+    * 
+    * Exemple d'utilisation :
+    * @code
+    * Picture une_Picture;
+    * @endcode
+    */
     Picture () ;
 
-        /**
-        * @brief Déstructeur de la classe
-        */
+    /**
+    * @brief Déstructeur de la classe
+    */
     ~Picture () ;
 
-        /**
-        * @brief Charge l'image à afficher
-        * @param[in] filename le chemin vers l'image 
-        * Exemple d'utilisation :
-        * @code
-        * Picture une_Picture;
-        * une_Picture.loadFromFile("chemin_vers_image", renderer);
-        * @endcode
-        */
+    /**
+    * @brief Charge l'image à afficher
+    * @param[in] filename le chemin vers l'image
+    * @return void  
+    * 
+    * Exemple d'utilisation :
+    * @code
+    * Picture une_Picture;
+    * une_Picture.loadFromFile("chemin_vers_image", renderer);
+    * @endcode
+    */
     void loadFromFile (const char* filename, SDL_Renderer * renderer);  
 
-        /**
-        * @brief Met l'image dans le renderer pour qu'il puisse la dessiner et donc l'afficher
-        * 
-        * Exemple d'utilisation :
-        * @code
-        * Picture une_Picture;
-        * une_Picture.loadFromCurrentSurface(renderer);
-        * @endcode
-        */
+    /**
+    * @brief Met l'image dans le renderer pour qu'il puisse la dessiner et donc l'afficher
+    * @return void 
+    * 
+    * Exemple d'utilisation :
+    * @code
+    * Picture une_Picture;
+    * une_Picture.loadFromCurrentSurface(renderer);
+    * @endcode
+    */
     void loadFromCurrentSurface (SDL_Renderer * renderer);  
 
-        /**
-        * @brief Dessine l'image que pointe le renderer et suivant les coordonnées x y 
-        * @param[in] x position en abscisse de l'image 
-        * @param[in] y position en ordonnée de l'image 
-        * @param[in] w largeur (width)
-        * @param[in] h hauteur (heigh)  
-        *
-        * Exemple d'utilisation :
-        * @code
-        * Picture une_Picture;
-        * une_Picture.draw(renderer, 1OO, 100, 5, 5);
-        * @endcode
-        */
+    /**
+    * @brief Dessine l'image que pointe le renderer et suivant les coordonnées x et y 
+    * @param[in] x position en abscisse de l'image 
+    * @param[in] y position en ordonnée de l'image 
+    * @param[in] w largeur (width)
+    * @param[in] h hauteur (heigh)
+    * @return void   
+    *
+    * Exemple d'utilisation :
+    * @code
+    * Picture une_Picture;
+    * une_Picture.draw(renderer, 1OO, 100, 5, 5);
+    * @endcode
+    */
     void draw (SDL_Renderer * renderer, int x, int y, int w=-1, int h=-1);  
 
 private:
@@ -99,7 +104,7 @@ public:
 
     /**
     * @brief  Constructeur de la classe : initialise dimx et dimy (après vérification), puis alloue le tableau de pixel dans le tas (image noire)
-    * @param[in] dimx la dimension en abcsisse de notre image 
+    * @param[in] dimx la dimension en abscisse de notre image 
     * @param[in] dimy la dimension en ordonnée de notre image 
     * 
     * Exemple d'utilisation :
@@ -244,7 +249,7 @@ public:
     void afficherInit (); 
 
     /**
-    * @brief S'occupe de l'affichage de l'aimge et des actions de l'utilisateur (zoom, dézoom et clique de la souris dans notre cas)
+    * @brief S'occupe de l'affichage de l'image et des actions de l'utilisateur (zoom, dézoom, ...)
     * @return void 
     * 
     * Exemple d'utilisation :

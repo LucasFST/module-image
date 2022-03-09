@@ -11,7 +11,6 @@ Pixel::Pixel()
 	b = 0;
 }
 
-
 //constructeur avec des paramètres rentrés par l'uti
 Pixel::Pixel (unsigned char nr, unsigned char ng, unsigned char nb)
 {
