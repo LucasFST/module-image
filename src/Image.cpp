@@ -226,8 +226,8 @@ void Image::afficherBoucle()
     bool stop = false;
     SDL_Event events;
     int h,w,DIM;
-    h=10;
-    w=10;
+    h=50;
+    w=50;
     DIM=200;
     while (!stop)
     {
@@ -250,11 +250,14 @@ void Image::afficherBoucle()
             case SDL_SCANCODE_T:
                 h=h*2;
                 w=w*2;
+                if(h>10000) h=10000;
+                if(w>10000) w=10000;
                 break;
             default: break;
             }
         }
         }
+        SDL_SetRenderDrawColor(renderer, 206, 206, 206, 255); 
         SDL_RenderClear(renderer);
         imageSDL.draw(renderer, (DIM/2)-w/2, (DIM/2)-h/2, w, h);
         SDL_RenderPresent(renderer);
