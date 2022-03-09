@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ouvrir_37',['ouvrir',['../class_image.html#a504778b71d66c4da931cad497e2ec249',1,'Image']]]
+  ['loadfromcurrentsurface_41',['loadFromCurrentSurface',['../class_picture.html#a5a3c745a05a04daa7fa005023b17a10a',1,'Picture']]],
+  ['loadfromfile_42',['loadFromFile',['../class_picture.html#a6d8578c469fd71c611fe77241526925b',1,'Picture']]]
 ];

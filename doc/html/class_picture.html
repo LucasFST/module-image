@@ -73,29 +73,172 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6d8578c469fd71c611fe77241526925b"><td class="memItemLeft" align="right" valign="top"><a id="a6d8578c469fd71c611fe77241526925b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loadFromFile</b> (const char *filename, SDL_Renderer *renderer)</td></tr>
+<tr class="memitem:a8995e51ea021e90aaa42bb44a51d2b39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_picture.html#a8995e51ea021e90aaa42bb44a51d2b39">Picture</a> ()</td></tr>
+<tr class="memdesc:a8995e51ea021e90aaa42bb44a51d2b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut de la classe.  <a href="class_picture.html#a8995e51ea021e90aaa42bb44a51d2b39">More...</a><br /></td></tr>
+<tr class="separator:a8995e51ea021e90aaa42bb44a51d2b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d8578c469fd71c611fe77241526925b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_picture.html#a6d8578c469fd71c611fe77241526925b">loadFromFile</a> (const char *filename, SDL_Renderer *renderer)</td></tr>
+<tr class="memdesc:a6d8578c469fd71c611fe77241526925b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charge l'image à afficher.  <a href="class_picture.html#a6d8578c469fd71c611fe77241526925b">More...</a><br /></td></tr>
 <tr class="separator:a6d8578c469fd71c611fe77241526925b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a3c745a05a04daa7fa005023b17a10a"><td class="memItemLeft" align="right" valign="top"><a id="a5a3c745a05a04daa7fa005023b17a10a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loadFromCurrentSurface</b> (SDL_Renderer *renderer)</td></tr>
+<tr class="memitem:a5a3c745a05a04daa7fa005023b17a10a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_picture.html#a5a3c745a05a04daa7fa005023b17a10a">loadFromCurrentSurface</a> (SDL_Renderer *renderer)</td></tr>
+<tr class="memdesc:a5a3c745a05a04daa7fa005023b17a10a"><td class="mdescLeft">&#160;</td><td class="mdescRight">mettre l'image dans le renderer pour qu'il puisse la dessiner et donc l'afficher  <a href="class_picture.html#a5a3c745a05a04daa7fa005023b17a10a">More...</a><br /></td></tr>
 <tr class="separator:a5a3c745a05a04daa7fa005023b17a10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5ce2ae3c12645db9be3bbb1f40b2f49"><td class="memItemLeft" align="right" valign="top"><a id="ab5ce2ae3c12645db9be3bbb1f40b2f49"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (SDL_Renderer *renderer, int x, int y, int w=-1, int h=-1)</td></tr>
+<tr class="memitem:ab5ce2ae3c12645db9be3bbb1f40b2f49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_picture.html#ab5ce2ae3c12645db9be3bbb1f40b2f49">draw</a> (SDL_Renderer *renderer, int x, int y, int w=-1, int h=-1)</td></tr>
+<tr class="memdesc:ab5ce2ae3c12645db9be3bbb1f40b2f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">dessiner l'image que pointe le renderer et suivant les coordonnées x y  <a href="class_picture.html#ab5ce2ae3c12645db9be3bbb1f40b2f49">More...</a><br /></td></tr>
 <tr class="separator:ab5ce2ae3c12645db9be3bbb1f40b2f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90623a96a6ca31f594f782a163c66639"><td class="memItemLeft" align="right" valign="top"><a id="a90623a96a6ca31f594f782a163c66639"></a>
-SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><b>getTexture</b> () const</td></tr>
-<tr class="separator:a90623a96a6ca31f594f782a163c66639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3db57522a02f532302c978d5d8051e9d"><td class="memItemLeft" align="right" valign="top"><a id="a3db57522a02f532302c978d5d8051e9d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSurface</b> (SDL_Surface *surf)</td></tr>
-<tr class="separator:a3db57522a02f532302c978d5d8051e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>{Brossat Pierrick ; Faustmann Lucas} </dd></dl>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8995e51ea021e90aaa42bb44a51d2b39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8995e51ea021e90aaa42bb44a51d2b39">&#9670;&nbsp;</a></span>Picture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Picture::Picture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur par défaut de la classe. </p>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line"><a class="code" href="class_picture.html">Picture</a> une_Picture;</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab5ce2ae3c12645db9be3bbb1f40b2f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5ce2ae3c12645db9be3bbb1f40b2f49">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Picture::draw </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dessiner l'image que pointe le renderer et suivant les coordonnées x y </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>position en abscisse de l'image </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>position en ordonnée de l'image </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>largeur (width) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>hauteur (heigh) <br  />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line"><a class="code" href="class_picture.html">Picture</a> une_Picture;</div>
+<div class="line">une_Picture.<a class="code" href="class_picture.html#ab5ce2ae3c12645db9be3bbb1f40b2f49">draw</a>(renderer, 1OO, 100, 5, 5);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a5a3c745a05a04daa7fa005023b17a10a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a3c745a05a04daa7fa005023b17a10a">&#9670;&nbsp;</a></span>loadFromCurrentSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Picture::loadFromCurrentSurface </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>mettre l'image dans le renderer pour qu'il puisse la dessiner et donc l'afficher </p>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line"><a class="code" href="class_picture.html">Picture</a> une_Picture;</div>
+<div class="line">une_Picture.<a class="code" href="class_picture.html#a5a3c745a05a04daa7fa005023b17a10a">loadFromCurrentSurface</a>(renderer);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a6d8578c469fd71c611fe77241526925b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d8578c469fd71c611fe77241526925b">&#9670;&nbsp;</a></span>loadFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Picture::loadFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Charge l'image à afficher. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>le chemin vers l'image Exemple d'utilisation : <div class="fragment"><div class="line"><a class="code" href="class_picture.html">Picture</a> une_Picture;</div>
+<div class="line">une_Picture.<a class="code" href="class_picture.html#a6d8578c469fd71c611fe77241526925b">loadFromFile</a>(<span class="stringliteral">&quot;chemin_vers_image&quot;</span>, renderer);</div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="_image_8h_source.html">Image.h</a></li>
 <li>src/Image.cpp</li>
 </ul>
 </div><!-- contents -->
+<div class="ttc" id="aclass_picture_html"><div class="ttname"><a href="class_picture.html">Picture</a></div><div class="ttdef"><b>Definition:</b> Image.h:15</div></div>
+<div class="ttc" id="aclass_picture_html_ab5ce2ae3c12645db9be3bbb1f40b2f49"><div class="ttname"><a href="class_picture.html#ab5ce2ae3c12645db9be3bbb1f40b2f49">Picture::draw</a></div><div class="ttdeci">void draw(SDL_Renderer *renderer, int x, int y, int w=-1, int h=-1)</div><div class="ttdoc">dessiner l'image que pointe le renderer et suivant les coordonnées x y</div><div class="ttdef"><b>Definition:</b> Image.cpp:342</div></div>
+<div class="ttc" id="aclass_picture_html_a6d8578c469fd71c611fe77241526925b"><div class="ttname"><a href="class_picture.html#a6d8578c469fd71c611fe77241526925b">Picture::loadFromFile</a></div><div class="ttdeci">void loadFromFile(const char *filename, SDL_Renderer *renderer)</div><div class="ttdoc">Charge l'image à afficher.</div><div class="ttdef"><b>Definition:</b> Image.cpp:296</div></div>
+<div class="ttc" id="aclass_picture_html_a5a3c745a05a04daa7fa005023b17a10a"><div class="ttname"><a href="class_picture.html#a5a3c745a05a04daa7fa005023b17a10a">Picture::loadFromCurrentSurface</a></div><div class="ttdeci">void loadFromCurrentSurface(SDL_Renderer *renderer)</div><div class="ttdoc">mettre l'image dans le renderer pour qu'il puisse la dessiner et donc l'afficher</div><div class="ttdef"><b>Definition:</b> Image.cpp:328</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

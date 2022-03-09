@@ -361,13 +361,5 @@ void Picture::draw (SDL_Renderer * renderer, int x, int y, int w, int h) {
 
 
 
-SDL_Texture * Picture::getTexture() const {return texture;}
-
-
-
-
-
-
-void Picture::setSurface(SDL_Surface * surf) {surface = surf;}
 
 

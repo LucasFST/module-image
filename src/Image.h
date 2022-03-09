@@ -9,7 +9,7 @@
 using namespace std;
 
 /**
-*   @author {Brossat Pierrick ; Faustmann Lucas}
+* @author {Brossat Pierrick ; Faustmann Lucas}
 */
 
 class Picture {
@@ -21,23 +21,61 @@ private:
     bool has_changed;
 
 public:
+
+
+        /**
+        * @brief Constructeur par défaut de la classe
+        * 
+        * Exemple d'utilisation :
+        * @code
+        * Picture une_Picture;
+        * @endcode
+        */
     Picture () ;
-    void loadFromFile (const char* filename, SDL_Renderer * renderer);  //charger l'image à afficher
-    void loadFromCurrentSurface (SDL_Renderer * renderer);  //mettre l'image dans le renderer pour qu'il puisse la dessiner et donc l'afficher
-    void draw (SDL_Renderer * renderer, int x, int y, int w=-1, int h=-1);  //dessiner l'image que pointe le renderer et suivant les coordonnées x y (w et h ? zoom ?)
-    SDL_Texture * getTexture() const;
-    void setSurface(SDL_Surface * surf);
+
+
+        /**
+        * @brief Charge l'image à afficher
+        * @param[in] filename le chemin vers l'image 
+        * Exemple d'utilisation :
+        * @code
+        * Picture une_Picture;
+        * une_Picture.loadFromFile("chemin_vers_image", renderer);
+        * @endcode
+        */
+    void loadFromFile (const char* filename, SDL_Renderer * renderer);  
+
+
+
+        /**
+        * @brief mettre l'image dans le renderer pour qu'il puisse la dessiner et donc l'afficher
+        * 
+        * Exemple d'utilisation :
+        * @code
+        * Picture une_Picture;
+        * une_Picture.loadFromCurrentSurface(renderer);
+        * @endcode
+        */
+    void loadFromCurrentSurface (SDL_Renderer * renderer);  
+
+
+        /**
+        * @brief dessiner l'image que pointe le renderer et suivant les coordonnées x y 
+        * @param[in] x position en abscisse de l'image 
+        * @param[in] y position en ordonnée de l'image 
+        * @param[in] w largeur (width)
+        * @param[in] h hauteur (heigh)  
+
+        * Exemple d'utilisation :
+        * @code
+        * Picture une_Picture;
+        * une_Picture.draw(renderer, 1OO, 100, 5, 5);
+        * @endcode
+        */
+    void draw (SDL_Renderer * renderer, int x, int y, int w=-1, int h=-1);  
+
+
 };
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -156,7 +194,10 @@ class Image {
         * @endcode
         */
         void testRegression ();  
-        
+
+
+
+
         /**
         * @brief Sauver une image dans un fichier
         * @param[in,out] filename nom de l'image à sauvegarder (attention : en mode donnée/résultat mais CONST)
@@ -168,6 +209,8 @@ class Image {
         * @endcode
         */
         void sauver(const string& filename) const;
+
+
 
 
         /**
@@ -183,6 +226,8 @@ class Image {
         void ouvrir(const string& filename);
 
 
+
+
         /**
         * @brief Afficher les composantes RGB des pixels sur la console
         * @return void 
@@ -193,6 +238,7 @@ class Image {
         * @endcode
         */
         void afficherConsole();
+
 
 
         /**
