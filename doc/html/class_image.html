@@ -68,8 +68,6 @@ $(function() {
 <div class="title">Image Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="_image_8h_source.html">Image.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -83,9 +81,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a0294f63700543e11c0f0da85601c7ae5">~Image</a> ()</td></tr>
 <tr class="memdesc:a0294f63700543e11c0f0da85601c7ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de la classe : désallocation de la mémoire du tableau de pixel et mise à jour des champs dimx et dimy à 0. <br /></td></tr>
 <tr class="separator:a0294f63700543e11c0f0da85601c7ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2c1f02bdf9178459b5bb7409ab86648"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_pixel.html">Pixel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#aa2c1f02bdf9178459b5bb7409ab86648">getPix</a> (unsigned int x, unsigned int y) const</td></tr>
-<tr class="memdesc:aa2c1f02bdf9178459b5bb7409ab86648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesseur : récupère le pixel original de coordonnées (x,y) en vérifiant leur validité  <a href="class_image.html#aa2c1f02bdf9178459b5bb7409ab86648">More...</a><br /></td></tr>
-<tr class="separator:aa2c1f02bdf9178459b5bb7409ab86648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a761913306289b49fe427004170124ce4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_pixel.html">Pixel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a761913306289b49fe427004170124ce4">getPix</a> (unsigned int x, unsigned int y) const</td></tr>
+<tr class="memdesc:a761913306289b49fe427004170124ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesseur : récupère le pixel original de coordonnées (x,y) en vérifiant leur validité  <a href="class_image.html#a761913306289b49fe427004170124ce4">More...</a><br /></td></tr>
+<tr class="separator:a761913306289b49fe427004170124ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a713c922e13a0a05ac88bef756b4ca90d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a713c922e13a0a05ac88bef756b4ca90d">setPix</a> (unsigned int x, unsigned int y, const <a class="el" href="class_pixel.html">Pixel</a> &amp;couleur)</td></tr>
 <tr class="memdesc:a713c922e13a0a05ac88bef756b4ca90d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutateur : modifie la couleur du pixel de coordonnées (x,y) en vérifiant leur validité  <a href="class_image.html#a713c922e13a0a05ac88bef756b4ca90d">More...</a><br /></td></tr>
 <tr class="separator:a713c922e13a0a05ac88bef756b4ca90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,13 +105,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa3cc6f7401625c11dcd5ef003f37e4fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#aa3cc6f7401625c11dcd5ef003f37e4fa">afficherConsole</a> ()</td></tr>
 <tr class="memdesc:aa3cc6f7401625c11dcd5ef003f37e4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher les composantes RGB des pixels sur la console.  <a href="class_image.html#aa3cc6f7401625c11dcd5ef003f37e4fa">More...</a><br /></td></tr>
 <tr class="separator:aa3cc6f7401625c11dcd5ef003f37e4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5054efd59e01ba1de7ebd88bdc46a65f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a5054efd59e01ba1de7ebd88bdc46a65f">afficher</a> () const</td></tr>
-<tr class="memdesc:a5054efd59e01ba1de7ebd88bdc46a65f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche l'image dans une fenêtre SDL2.  <a href="class_image.html#a5054efd59e01ba1de7ebd88bdc46a65f">More...</a><br /></td></tr>
-<tr class="separator:a5054efd59e01ba1de7ebd88bdc46a65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d957034ad17e3911a4d9f7decdda22c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a4d957034ad17e3911a4d9f7decdda22c">afficher</a> ()</td></tr>
+<tr class="memdesc:a4d957034ad17e3911a4d9f7decdda22c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche l'image dans une fenêtre SDL2.  <a href="class_image.html#a4d957034ad17e3911a4d9f7decdda22c">More...</a><br /></td></tr>
+<tr class="separator:a4d957034ad17e3911a4d9f7decdda22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae73dea41f5bc4047e9b8e35d8635672d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#ae73dea41f5bc4047e9b8e35d8635672d">afficherInit</a> ()</td></tr>
+<tr class="memdesc:ae73dea41f5bc4047e9b8e35d8635672d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise la fenêtre SDL.  <a href="class_image.html#ae73dea41f5bc4047e9b8e35d8635672d">More...</a><br /></td></tr>
+<tr class="separator:ae73dea41f5bc4047e9b8e35d8635672d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc084a716888e1d2fc40ef6afd97602"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#abcc084a716888e1d2fc40ef6afd97602">afficherBoucle</a> ()</td></tr>
+<tr class="memdesc:abcc084a716888e1d2fc40ef6afd97602"><td class="mdescLeft">&#160;</td><td class="mdescRight">S'occupe de l'affichage de l'aimge et des actions de l'utilisateur (zoom, dézoom et clique de la souris dans notre cas)  <a href="class_image.html#abcc084a716888e1d2fc40ef6afd97602">More...</a><br /></td></tr>
+<tr class="separator:abcc084a716888e1d2fc40ef6afd97602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e7cb0011234a8ca7319d86ca12cff2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a7e7cb0011234a8ca7319d86ca12cff2a">afficherDetruit</a> ()</td></tr>
+<tr class="memdesc:a7e7cb0011234a8ca7319d86ca12cff2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruit la fenêtre SDL.  <a href="class_image.html#a7e7cb0011234a8ca7319d86ca12cff2a">More...</a><br /></td></tr>
+<tr class="separator:a7e7cb0011234a8ca7319d86ca12cff2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>{Brossat Pierrick ; Faustmann Lucas} </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a58edd1c45b4faeb5f789b0d036d02313"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58edd1c45b4faeb5f789b0d036d02313">&#9670;&nbsp;</a></span>Image() <span class="overload">[1/2]</span></h2>
 
@@ -174,8 +179,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5054efd59e01ba1de7ebd88bdc46a65f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5054efd59e01ba1de7ebd88bdc46a65f">&#9670;&nbsp;</a></span>afficher()</h2>
+<a id="a4d957034ad17e3911a4d9f7decdda22c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d957034ad17e3911a4d9f7decdda22c">&#9670;&nbsp;</a></span>afficher()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,14 +189,35 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void Image::afficher </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Affiche l'image dans une fenêtre SDL2. </p>
 <dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
-<p>Exemple d'utilisation : </p><div class="fragment"><div class="line">une_Image.<a class="code" href="class_image.html#a5054efd59e01ba1de7ebd88bdc46a65f">afficher</a>();</div>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line">une_Image.<a class="code" href="class_image.html#a4d957034ad17e3911a4d9f7decdda22c">afficher</a>();</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="abcc084a716888e1d2fc40ef6afd97602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc084a716888e1d2fc40ef6afd97602">&#9670;&nbsp;</a></span>afficherBoucle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Image::afficherBoucle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>S'occupe de l'affichage de l'aimge et des actions de l'utilisateur (zoom, dézoom et clique de la souris dans notre cas) </p>
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line">une_Image.<a class="code" href="class_image.html#abcc084a716888e1d2fc40ef6afd97602">afficherBoucle</a>();</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -213,6 +239,48 @@ Public Member Functions</h2></td></tr>
 <p>Afficher les composantes RGB des pixels sur la console. </p>
 <dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
 <p>Exemple d'utilisation : </p><div class="fragment"><div class="line">une_Image.<a class="code" href="class_image.html#aa3cc6f7401625c11dcd5ef003f37e4fa">afficherConsole</a>();</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a7e7cb0011234a8ca7319d86ca12cff2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e7cb0011234a8ca7319d86ca12cff2a">&#9670;&nbsp;</a></span>afficherDetruit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Image::afficherDetruit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruit la fenêtre SDL. </p>
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line">une_Image.<a class="code" href="class_image.html#a7e7cb0011234a8ca7319d86ca12cff2a">afficherDetruit</a>();</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ae73dea41f5bc4047e9b8e35d8635672d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae73dea41f5bc4047e9b8e35d8635672d">&#9670;&nbsp;</a></span>afficherInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Image::afficherInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise la fenêtre SDL. </p>
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line">une_Image.<a class="code" href="class_image.html#ae73dea41f5bc4047e9b8e35d8635672d">afficherInit</a>();</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -307,14 +375,14 @@ Public Member Functions</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="aa2c1f02bdf9178459b5bb7409ab86648"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2c1f02bdf9178459b5bb7409ab86648">&#9670;&nbsp;</a></span>getPix()</h2>
+<a id="a761913306289b49fe427004170124ce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a761913306289b49fe427004170124ce4">&#9670;&nbsp;</a></span>getPix()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_pixel.html">Pixel</a> Image::getPix </td>
+          <td class="memname"><a class="el" href="class_pixel.html">Pixel</a> &amp; Image::getPix </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -342,7 +410,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_pixel.html">Pixel</a></dd></dl>
-<p>Exemple d'utilisation : </p><div class="fragment"><div class="line"><a class="code" href="class_pixel.html">Pixel</a> un_Pixel = une_Image.<a class="code" href="class_image.html#aa2c1f02bdf9178459b5bb7409ab86648">getPix</a>(1,1)</div>
+<p>Exemple d'utilisation : </p><div class="fragment"><div class="line"><a class="code" href="class_pixel.html">Pixel</a> un_Pixel = une_Image.<a class="code" href="class_image.html#a761913306289b49fe427004170124ce4">getPix</a>(1,1)</div>
 </div><!-- fragment --> <dl class="section warning"><dt>Warning</dt><dd>x et y doivent être inférieurs strictement à dimx et dimy respectivement (dimensions de l'image) </dd></dl>
 
 </div>
@@ -477,17 +545,20 @@ Public Member Functions</h2></td></tr>
 <li>src/Image.cpp</li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclass_image_html_a82ffef6c89927b0cc755a3fe2fec637b"><div class="ttname"><a href="class_image.html#a82ffef6c89927b0cc755a3fe2fec637b">Image::testRegression</a></div><div class="ttdeci">void testRegression()</div><div class="ttdoc">Effectue une série de tests vérifiant que le module fonctionne et que les données membres de l'objet ...</div><div class="ttdef"><b>Definition:</b> Image.cpp:81</div></div>
+<div class="ttc" id="aclass_image_html_a82ffef6c89927b0cc755a3fe2fec637b"><div class="ttname"><a href="class_image.html#a82ffef6c89927b0cc755a3fe2fec637b">Image::testRegression</a></div><div class="ttdeci">void testRegression()</div><div class="ttdoc">Effectue une série de tests vérifiant que le module fonctionne et que les données membres de l'objet ...</div><div class="ttdef"><b>Definition:</b> Image.cpp:82</div></div>
 <div class="ttc" id="aclass_pixel_html"><div class="ttname"><a href="class_pixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> Pixel.h:11</div></div>
-<div class="ttc" id="aclass_image_html_aa2c1f02bdf9178459b5bb7409ab86648"><div class="ttname"><a href="class_image.html#aa2c1f02bdf9178459b5bb7409ab86648">Image::getPix</a></div><div class="ttdeci">Pixel getPix(unsigned int x, unsigned int y) const</div><div class="ttdoc">Accesseur : récupère le pixel original de coordonnées (x,y) en vérifiant leur validité</div><div class="ttdef"><b>Definition:</b> Image.cpp:41</div></div>
-<div class="ttc" id="aclass_image_html_a713c922e13a0a05ac88bef756b4ca90d"><div class="ttname"><a href="class_image.html#a713c922e13a0a05ac88bef756b4ca90d">Image::setPix</a></div><div class="ttdeci">void setPix(unsigned int x, unsigned int y, const Pixel &amp;couleur)</div><div class="ttdoc">Mutateur : modifie la couleur du pixel de coordonnées (x,y) en vérifiant leur validité</div><div class="ttdef"><b>Definition:</b> Image.cpp:49</div></div>
-<div class="ttc" id="aclass_image_html"><div class="ttname"><a href="class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> Image.h:11</div></div>
-<div class="ttc" id="aclass_image_html_af870cb0c00a370927e6957f99a409586"><div class="ttname"><a href="class_image.html#af870cb0c00a370927e6957f99a409586">Image::sauver</a></div><div class="ttdeci">void sauver(const string &amp;filename) const</div><div class="ttdoc">Sauver une image dans un fichier.</div><div class="ttdef"><b>Definition:</b> Image.cpp:121</div></div>
-<div class="ttc" id="aclass_image_html_a5054efd59e01ba1de7ebd88bdc46a65f"><div class="ttname"><a href="class_image.html#a5054efd59e01ba1de7ebd88bdc46a65f">Image::afficher</a></div><div class="ttdeci">void afficher() const</div><div class="ttdoc">Affiche l'image dans une fenêtre SDL2.</div><div class="ttdef"><b>Definition:</b> Image.cpp:174</div></div>
-<div class="ttc" id="aclass_image_html_a62d0c277a049c0ea1da7ba2dd2131c31"><div class="ttname"><a href="class_image.html#a62d0c277a049c0ea1da7ba2dd2131c31">Image::effacer</a></div><div class="ttdeci">void effacer(const Pixel &amp;couleur)</div><div class="ttdoc">Efface l'image en la remplissant de la couleur passée en paramètre.</div><div class="ttdef"><b>Definition:</b> Image.cpp:76</div></div>
-<div class="ttc" id="aclass_image_html_ae18101e02b43b2a2285776412cf92936"><div class="ttname"><a href="class_image.html#ae18101e02b43b2a2285776412cf92936">Image::dessinerRectangle</a></div><div class="ttdeci">void dessinerRectangle(unsigned int Xmin, unsigned int Ymin, unsigned int Xmax, unsigned int Ymax, const Pixel &amp;couleur)</div><div class="ttdoc">Dessine un rectangle plein de la couleur désirée dans l'image.</div><div class="ttdef"><b>Definition:</b> Image.cpp:61</div></div>
-<div class="ttc" id="aclass_image_html_a504778b71d66c4da931cad497e2ec249"><div class="ttname"><a href="class_image.html#a504778b71d66c4da931cad497e2ec249">Image::ouvrir</a></div><div class="ttdeci">void ouvrir(const string &amp;filename)</div><div class="ttdoc">Ouvrir une image depuis un fichier.</div><div class="ttdef"><b>Definition:</b> Image.cpp:136</div></div>
-<div class="ttc" id="aclass_image_html_aa3cc6f7401625c11dcd5ef003f37e4fa"><div class="ttname"><a href="class_image.html#aa3cc6f7401625c11dcd5ef003f37e4fa">Image::afficherConsole</a></div><div class="ttdeci">void afficherConsole()</div><div class="ttdoc">Afficher les composantes RGB des pixels sur la console.</div><div class="ttdef"><b>Definition:</b> Image.cpp:160</div></div>
+<div class="ttc" id="aclass_image_html_abcc084a716888e1d2fc40ef6afd97602"><div class="ttname"><a href="class_image.html#abcc084a716888e1d2fc40ef6afd97602">Image::afficherBoucle</a></div><div class="ttdeci">void afficherBoucle()</div><div class="ttdoc">S'occupe de l'affichage de l'aimge et des actions de l'utilisateur (zoom, dézoom et clique de la sour...</div><div class="ttdef"><b>Definition:</b> Image.cpp:229</div></div>
+<div class="ttc" id="aclass_image_html_a4d957034ad17e3911a4d9f7decdda22c"><div class="ttname"><a href="class_image.html#a4d957034ad17e3911a4d9f7decdda22c">Image::afficher</a></div><div class="ttdeci">void afficher()</div><div class="ttdoc">Affiche l'image dans une fenêtre SDL2.</div><div class="ttdef"><b>Definition:</b> Image.cpp:190</div></div>
+<div class="ttc" id="aclass_image_html_a713c922e13a0a05ac88bef756b4ca90d"><div class="ttname"><a href="class_image.html#a713c922e13a0a05ac88bef756b4ca90d">Image::setPix</a></div><div class="ttdeci">void setPix(unsigned int x, unsigned int y, const Pixel &amp;couleur)</div><div class="ttdoc">Mutateur : modifie la couleur du pixel de coordonnées (x,y) en vérifiant leur validité</div><div class="ttdef"><b>Definition:</b> Image.cpp:50</div></div>
+<div class="ttc" id="aclass_image_html"><div class="ttname"><a href="class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> Image.h:45</div></div>
+<div class="ttc" id="aclass_image_html_af870cb0c00a370927e6957f99a409586"><div class="ttname"><a href="class_image.html#af870cb0c00a370927e6957f99a409586">Image::sauver</a></div><div class="ttdeci">void sauver(const string &amp;filename) const</div><div class="ttdoc">Sauver une image dans un fichier.</div><div class="ttdef"><b>Definition:</b> Image.cpp:127</div></div>
+<div class="ttc" id="aclass_image_html_a761913306289b49fe427004170124ce4"><div class="ttname"><a href="class_image.html#a761913306289b49fe427004170124ce4">Image::getPix</a></div><div class="ttdeci">Pixel &amp; getPix(unsigned int x, unsigned int y) const</div><div class="ttdoc">Accesseur : récupère le pixel original de coordonnées (x,y) en vérifiant leur validité</div><div class="ttdef"><b>Definition:</b> Image.cpp:42</div></div>
+<div class="ttc" id="aclass_image_html_a62d0c277a049c0ea1da7ba2dd2131c31"><div class="ttname"><a href="class_image.html#a62d0c277a049c0ea1da7ba2dd2131c31">Image::effacer</a></div><div class="ttdeci">void effacer(const Pixel &amp;couleur)</div><div class="ttdoc">Efface l'image en la remplissant de la couleur passée en paramètre.</div><div class="ttdef"><b>Definition:</b> Image.cpp:77</div></div>
+<div class="ttc" id="aclass_image_html_ae18101e02b43b2a2285776412cf92936"><div class="ttname"><a href="class_image.html#ae18101e02b43b2a2285776412cf92936">Image::dessinerRectangle</a></div><div class="ttdeci">void dessinerRectangle(unsigned int Xmin, unsigned int Ymin, unsigned int Xmax, unsigned int Ymax, const Pixel &amp;couleur)</div><div class="ttdoc">Dessine un rectangle plein de la couleur désirée dans l'image.</div><div class="ttdef"><b>Definition:</b> Image.cpp:62</div></div>
+<div class="ttc" id="aclass_image_html_ae73dea41f5bc4047e9b8e35d8635672d"><div class="ttname"><a href="class_image.html#ae73dea41f5bc4047e9b8e35d8635672d">Image::afficherInit</a></div><div class="ttdeci">void afficherInit()</div><div class="ttdoc">Initialise la fenêtre SDL.</div><div class="ttdef"><b>Definition:</b> Image.cpp:199</div></div>
+<div class="ttc" id="aclass_image_html_a504778b71d66c4da931cad497e2ec249"><div class="ttname"><a href="class_image.html#a504778b71d66c4da931cad497e2ec249">Image::ouvrir</a></div><div class="ttdeci">void ouvrir(const string &amp;filename)</div><div class="ttdoc">Ouvrir une image depuis un fichier.</div><div class="ttdef"><b>Definition:</b> Image.cpp:144</div></div>
+<div class="ttc" id="aclass_image_html_aa3cc6f7401625c11dcd5ef003f37e4fa"><div class="ttname"><a href="class_image.html#aa3cc6f7401625c11dcd5ef003f37e4fa">Image::afficherConsole</a></div><div class="ttdeci">void afficherConsole()</div><div class="ttdoc">Afficher les composantes RGB des pixels sur la console.</div><div class="ttdef"><b>Definition:</b> Image.cpp:166</div></div>
+<div class="ttc" id="aclass_image_html_a7e7cb0011234a8ca7319d86ca12cff2a"><div class="ttname"><a href="class_image.html#a7e7cb0011234a8ca7319d86ca12cff2a">Image::afficherDetruit</a></div><div class="ttdeci">void afficherDetruit()</div><div class="ttdoc">Détruit la fenêtre SDL.</div><div class="ttdef"><b>Definition:</b> Image.cpp:269</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -206,10 +206,45 @@ class Image {
         */
         void afficher();
 
+
+
+
+         /**
+        * @brief Initialise la fenêtre SDL 
+        * @return void 
+        * 
+        * Exemple d'utilisation :
+        * @code 
+        * une_Image.afficherInit();
+        * @endcode
+        */
         void afficherInit (); 
 
+
+
+         /**
+        * @brief S'occupe de l'affichage de l'aimge et des actions de l'utilisateur (zoom, dézoom et clique de la souris dans notre cas)
+        * @return void 
+        * 
+        * Exemple d'utilisation :
+        * @code 
+        * une_Image.afficherBoucle();
+        * @endcode
+        */
         void afficherBoucle ();
 
+
+
+
+         /**
+        * @brief Détruit la fenêtre SDL 
+        * @return void 
+        * 
+        * Exemple d'utilisation :
+        * @code 
+        * une_Image.afficherDetruit();
+        * @endcode
+        */
         void afficherDetruit ();
 
 
