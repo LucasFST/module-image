@@ -135,6 +135,7 @@ class Image {
 
 
       
+
         /**
         * @brief   Mutateur : modifie la couleur du pixel de coordonnées (x,y) en vérifiant leur validité
         * @param[in] x la coordonnée x du pixel
@@ -268,6 +269,7 @@ class Image {
 
 
 
+
          /**
         * @brief S'occupe de l'affichage de l'aimge et des actions de l'utilisateur (zoom, dézoom et clique de la souris dans notre cas)
         * @return void 
@@ -302,11 +304,6 @@ class Image {
         SDL_Renderer * renderer;
         Picture imageSDL;
 };
-
-
-//----------------------------------------------------------
-
-//! \brief Pour gérer une image avec SDL2
 
 
 #endif
