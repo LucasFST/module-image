@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Pixel.h"
-#include <cassert>
 
 
 //constructeur par défaut (couleur noir)
